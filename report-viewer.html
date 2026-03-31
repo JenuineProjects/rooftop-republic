@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Report -- Rooftop Republic</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --color-primary-green: #3A7D44;
+      --color-primary-dark: #2C3E2D;
+      --color-primary-light: #F4F7F2;
+      --color-warm-accent: #C45D3E;
+      --color-white: #FFFFFF;
+      --font-heading: 'DM Serif Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--color-primary-dark);
+      background: var(--color-primary-light);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .report-header {
+      background: var(--color-primary-dark);
+      color: var(--color-white);
+      padding: 24px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .report-header__title {
+      font-family: var(--font-heading);
+      font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
+    }
+
+    .report-header__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .report-header__back:hover {
+      color: #fff;
+      border-color: rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .report-body {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+
+    .report-loading {
+      text-align: center;
+      padding: 64px 24px;
+      color: #8E9B97;
+      font-size: 1.1rem;
+    }
+
+    .report-error {
+      text-align: center;
+      padding: 64px 24px;
+      color: var(--color-warm-accent);
+    }
+
+    /* Markdown rendered styles */
+    .report-body h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
+      color: var(--color-primary-dark);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .report-body h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.375rem, 2vw + 0.5rem, 1.75rem);
+      color: var(--color-primary-dark);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #D5E8D4;
+    }
+
+    .report-body h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--color-primary-green);
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+
+    .report-body h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    .report-body p {
+      margin-bottom: 16px;
+    }
+
+    .report-body strong {
+      color: var(--color-primary-dark);
+      font-weight: 600;
+    }
+
+    .report-body em {
+      font-style: italic;
+    }
+
+    .report-body ul, .report-body ol {
+      margin: 12px 0 20px 24px;
+    }
+
+    .report-body li {
+      margin-bottom: 8px;
+    }
+
+    .report-body blockquote {
+      border-left: 3px solid var(--color-primary-green);
+      padding: 12px 20px;
+      margin: 20px 0;
+      background: rgba(58, 125, 68, 0.05);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .report-body code {
+      background: rgba(44, 62, 45, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.9em;
+    }
+
+    .report-body pre {
+      background: var(--color-primary-dark);
+      color: #d4e8d4;
+      padding: 20px 24px;
+      border-radius: 12px;
+      overflow-x: auto;
+      margin: 20px 0;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .report-body pre code {
+      background: none;
+      padding: 0;
+      color: inherit;
+    }
+
+    .report-body hr {
+      border: none;
+      border-top: 2px solid #D5E8D4;
+      margin: 40px 0;
+    }
+
+    .report-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 0.92rem;
+      overflow-x: auto;
+      display: block;
+    }
+
+    .report-body thead th {
+      background: var(--color-primary-dark);
+      color: var(--color-white);
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .report-body td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #D5E8D4;
+      vertical-align: top;
+    }
+
+    .report-body tr:nth-child(even) td {
+      background: rgba(58, 125, 68, 0.03);
+    }
+
+    @media (max-width: 639px) {
+      .report-body { padding: 32px 16px 64px; }
+      .report-header { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="report-header">
+    <div class="report-header__title" id="report-title">Agent Report</div>
+    <a href="index.html" class="report-header__back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      Back to Landing Page
+    </a>
+  </div>
+
+  <div class="report-body" id="report-body">
+    <div class="report-loading">Loading report...</div>
+  </div>
+
+  <script>
+    (function() {
+      var params = new URLSearchParams(window.location.search);
+      var report = params.get('report');
+      var titleEl = document.getElementById('report-title');
+      var bodyEl = document.getElementById('report-body');
+
+      var titles = {
+        '01-gamification-expert-report': 'Agent 01: Gamification Expert Report',
+        '02-urban-farming-expert-report': 'Agent 02: Urban Farming & Community Expert Report',
+        '03-designer-report': 'Agent 03: Designer Report',
+        '04-coder-report': 'Agent 04: Front-End Developer Report',
+        '05-communicator-report': 'Agent 05: Communicator Report',
+        '01-gamification-expert-prompt': 'Agent 01: Gamification Expert — System Prompt',
+        '02-urban-farming-expert-prompt': 'Agent 02: Urban Farming Expert — System Prompt',
+        '03-designer-prompt': 'Agent 03: Designer — System Prompt',
+        '04-coder-prompt': 'Agent 04: Front-End Developer — System Prompt',
+        '05-communicator-prompt': 'Agent 05: Communicator — System Prompt'
+      };
+
+      if (!report) {
+        bodyEl.innerHTML = '<div class="report-error"><h2>No report specified</h2><p>Please access this page from the landing page agent cards.</p></div>';
+        return;
+      }
+
+      titleEl.textContent = titles[report] || 'Agent Report';
+      document.title = (titles[report] || 'Agent Report') + ' — Rooftop Republic';
+
+      fetch('reports/' + report + '.md')
+        .then(function(res) {
+          if (!res.ok) throw new Error('Not found');
+          return res.text();
+        })
+        .then(function(md) {
+          bodyEl.innerHTML = renderMarkdown(md);
+        })
+        .catch(function() {
+          bodyEl.innerHTML = '<div class="report-error"><h2>Report not found</h2><p>The report file could not be loaded. It may not have been generated yet.</p><p><a href="index.html">Back to landing page</a></p></div>';
+        });
+
+      /* Lightweight markdown renderer — handles the patterns in our reports */
+      function renderMarkdown(text) {
+        var html = text;
+
+        // Escape HTML
+        html = html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+        // Code blocks (``` ... ```)
+        html = html.replace(/```(\w*)\n([\s\S]*?)```/g, function(m, lang, code) {
+          return '<pre><code>' + code.trim() + '</code></pre>';
+        });
+
+        // Horizontal rules
+        html = html.replace(/^---+$/gm, '<hr>');
+
+        // Headers
+        html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
+        html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
+        html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
+        html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+
+        // Bold and italic
+        html = html.replace(/\*\*\*(.+?)\*\*\*/g, '<strong><em>$1</em></strong>');
+        html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+
+        // Inline code
+        html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+        // Blockquotes
+        html = html.replace(/^&gt; (.+)$/gm, '<blockquote><p>$1</p></blockquote>');
+
+        // Tables
+        html = html.replace(/^(\|.+\|)\n(\|[-| :]+\|)\n((?:\|.+\|\n?)+)/gm, function(match, headerRow, sepRow, bodyRows) {
+          var headers = headerRow.split('|').filter(function(c) { return c.trim(); });
+          var rows = bodyRows.trim().split('\n');
+          var t = '<table><thead><tr>';
+          headers.forEach(function(h) { t += '<th>' + h.trim() + '</th>'; });
+          t += '</tr></thead><tbody>';
+          rows.forEach(function(row) {
+            var cells = row.split('|').filter(function(c) { return c.trim(); });
+            t += '<tr>';
+            cells.forEach(function(c) { t += '<td>' + c.trim() + '</td>'; });
+            t += '</tr>';
+          });
+          t += '</tbody></table>';
+          return t;
+        });
+
+        // Unordered lists
+        html = html.replace(/^((?:- .+\n?)+)/gm, function(block) {
+          var items = block.trim().split('\n').map(function(line) {
+            return '<li>' + line.replace(/^- /, '') + '</li>';
+          }).join('');
+          return '<ul>' + items + '</ul>';
+        });
+
+        // Ordered lists
+        html = html.replace(/^((?:\d+\. .+\n?)+)/gm, function(block) {
+          var items = block.trim().split('\n').map(function(line) {
+            return '<li>' + line.replace(/^\d+\. /, '') + '</li>';
+          }).join('');
+          return '<ol>' + items + '</ol>';
+        });
+
+        // Paragraphs — wrap remaining loose text lines
+        html = html.replace(/^(?!<[hupoltb]|<\/|<hr)(.+)$/gm, '<p>$1</p>');
+
+        // Clean up empty paragraphs
+        html = html.replace(/<p>\s*<\/p>/g, '');
+
+        return html;
+      }
+    })();
+  </script>
+</body>
+</html>

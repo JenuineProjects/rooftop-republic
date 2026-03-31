@@ -1,0 +1,2918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rooftop Republic — Dublin's Rooftops Are Waking Up</title>
+  <meta name="description" content="Join 250+ Dubliners turning empty rooftops into thriving gardens. Start with one pot this weekend. No experience needed.">
+  <meta property="og:title" content="Rooftop Republic — Dublin's Rooftops Are Waking Up">
+  <meta property="og:description" content="40 rooftops. 250+ growers. One city, growing. Start your first garden this weekend.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rooftop Republic — Dublin's Rooftops Are Waking Up">
+  <meta name="twitter:description" content="40 rooftops. 250+ growers. One city, growing. Start your first garden this weekend.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== DESIGN SYSTEM: CSS CUSTOM PROPERTIES ===== */
+    :root {
+      /* Colour Palette */
+      --color-primary-green: #3A7D44;
+      --color-primary-green-dark: #2E6636;
+      --color-primary-dark: #2C3E2D;
+      --color-primary-light: #F4F7F2;
+      --color-warm-accent: #C45D3E;
+      --color-warm-light: #F0D5C4;
+      --color-cool-neutral: #8E9B97;
+      --color-harvest: #E07A4B;
+      --color-info-blue: #5B8FA8;
+      --color-white: #FFFFFF;
+      --color-shadow: rgba(44, 62, 45, 0.08);
+      --color-shadow-md: rgba(44, 62, 45, 0.12);
+      --color-progress-track: #D5E8D4;
+
+      /* Typography */
+      --font-heading: 'DM Serif Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+      /* Fluid Type Scale */
+      --text-hero: clamp(2.25rem, 5vw + 1rem, 4rem);
+      --text-section: clamp(1.75rem, 3vw + 0.75rem, 2.75rem);
+      --text-subsection: clamp(1.375rem, 2vw + 0.5rem, 1.875rem);
+      --text-body-lg: clamp(1.125rem, 1vw + 0.75rem, 1.25rem);
+      --text-body: clamp(1rem, 0.5vw + 0.75rem, 1.125rem);
+      --text-body-sm: clamp(0.875rem, 0.25vw + 0.75rem, 0.9375rem);
+      --text-cta: clamp(1rem, 0.5vw + 0.75rem, 1.125rem);
+      --text-counter: clamp(2.5rem, 6vw + 1rem, 4.5rem);
+      --text-card-title: clamp(1.25rem, 1.5vw + 0.5rem, 1.5rem);
+      --text-label: clamp(0.75rem, 0.2vw + 0.6rem, 0.8125rem);
+
+      /* Spacing Scale (8px base) */
+      --space-xs: 4px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 24px;
+      --space-xl: 32px;
+      --space-2xl: 48px;
+      --space-3xl: 64px;
+      --space-4xl: 96px;
+      --space-5xl: 128px;
+
+      /* Layout */
+      --max-content: 1200px;
+      --max-text: 720px;
+      --max-card: 800px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-full: 50%;
+    }
+
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: var(--text-body);
+      line-height: 1.7;
+      color: var(--color-primary-dark);
+      background-color: var(--color-primary-light);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--color-primary-green); text-decoration: none; transition: color 0.2s ease; }
+    a:hover { color: var(--color-primary-dark); }
+
+    /* ===== SKIP LINK ===== */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: var(--space-md);
+      background: var(--color-primary-green);
+      color: var(--color-white);
+      padding: var(--space-sm) var(--space-md);
+      border-radius: var(--radius-sm);
+      z-index: 1000;
+      font-weight: 600;
+    }
+    .skip-link:focus {
+      top: var(--space-md);
+      outline: 3px solid var(--color-warm-accent);
+      outline-offset: 2px;
+    }
+
+    /* ===== FOCUS STYLES ===== */
+    :focus-visible {
+      outline: 3px solid var(--color-primary-green);
+      outline-offset: 2px;
+    }
+
+    /* ===== UTILITY CLASSES ===== */
+    .container {
+      width: 100%;
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    @media (min-width: 640px) {
+      .container { padding: 0 32px; }
+    }
+
+    .text-container {
+      max-width: var(--max-text);
+      margin: 0 auto;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    /* ===== SCROLL ANIMATIONS ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ===== SECTION SPACING ===== */
+    .section {
+      padding: var(--space-xl) 0;
+    }
+    @media (min-width: 640px) {
+      .section { padding: var(--space-2xl) 0; }
+    }
+    @media (min-width: 1024px) {
+      .section { padding: var(--space-3xl) 0; }
+    }
+
+    .section--white { background-color: var(--color-white); }
+    .section--mist { background-color: var(--color-primary-light); }
+    .section--warm { background-color: var(--color-warm-light); }
+    .section--dark { background-color: var(--color-primary-dark); color: var(--color-white); }
+
+    /* ===== HEADINGS ===== */
+    .heading-section {
+      font-family: var(--font-heading);
+      font-size: var(--text-section);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      color: var(--color-primary-dark);
+      text-align: center;
+      margin-bottom: var(--space-lg);
+    }
+    .heading-sub {
+      font-family: var(--font-body);
+      font-size: var(--text-subsection);
+      font-weight: 600;
+      line-height: 1.3;
+      color: var(--color-primary-dark);
+    }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-sm);
+      font-family: var(--font-body);
+      font-size: var(--text-cta);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      padding: var(--space-md) var(--space-lg);
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      min-height: 44px;
+      text-decoration: none;
+    }
+    .btn--primary {
+      background-color: var(--color-primary-green);
+      color: var(--color-white);
+    }
+    .btn--primary:hover {
+      background-color: var(--color-primary-green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--color-shadow-md);
+      color: var(--color-white);
+    }
+    .btn--secondary {
+      background-color: transparent;
+      color: var(--color-primary-green);
+      border: 2px solid var(--color-primary-green);
+    }
+    .btn--secondary:hover {
+      background-color: var(--color-primary-green);
+      color: var(--color-white);
+    }
+    .btn--full { width: 100%; }
+    @media (min-width: 640px) {
+      .btn--full { width: auto; }
+    }
+
+    /* =============================================================
+       SECTION 1: HERO
+       ============================================================= */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: var(--space-xl);
+      overflow: hidden;
+      /* Placeholder for hero image -- replace with real Dublin rooftop photo:
+         A candid shot of a Dublin rooftop garden, overcast sky, brick buildings,
+         diverse group of people tending containers, imperfect plants */
+      background:
+        linear-gradient(rgba(44, 62, 45, 0.55), rgba(44, 62, 45, 0.65)),
+        linear-gradient(135deg, #4a6741 0%, #2C3E2D 40%, #5a4a3a 70%, #8E9B97 100%);
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero__headline {
+      font-family: var(--font-heading);
+      font-size: var(--text-hero);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--color-white);
+      max-width: 800px;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .hero__counters {
+      display: flex;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: var(--space-2xl);
+    }
+
+    .hero__stat {
+      text-align: center;
+      min-width: 100px;
+    }
+
+    .hero__stat-number {
+      font-family: var(--font-heading);
+      font-size: var(--text-counter);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      color: var(--color-white);
+      display: block;
+    }
+
+    .hero__stat-label {
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm);
+      color: rgba(255, 255, 255, 0.8);
+      display: block;
+      margin-top: var(--space-xs);
+    }
+
+    .hero__scroll {
+      position: absolute;
+      bottom: var(--space-xl);
+      left: 50%;
+      transform: translateX(-50%);
+      color: var(--color-white);
+      opacity: 0.8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-xs);
+      font-size: var(--text-body-sm);
+    }
+
+    .hero__scroll-icon {
+      width: 24px;
+      height: 24px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(8px); }
+      60% { transform: translateY(4px); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .hero__scroll-icon { animation: none; }
+    }
+
+    /* =============================================================
+       SECTION 2: IDENTITY SHIFT
+       ============================================================= */
+    .identity {
+      text-align: center;
+      padding: var(--space-3xl) 0;
+    }
+
+    .identity__statement {
+      font-family: var(--font-heading);
+      font-size: var(--text-section);
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+      color: var(--color-primary-dark);
+      max-width: var(--max-text);
+      margin: 0 auto var(--space-xl);
+    }
+
+    .identity__portraits {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-lg);
+      flex-wrap: wrap;
+    }
+
+    .identity__portrait {
+      width: 64px;
+      height: 64px;
+      border-radius: var(--radius-full);
+      /* Placeholder portraits -- replace with real candid photos of diverse Dublin growers */
+      background-size: cover;
+      background-position: center;
+      flex-shrink: 0;
+    }
+    .identity__portrait:nth-child(1) {
+      background: linear-gradient(135deg, #e8c4a0, #d4956a);
+      /* Real image: young woman on a Dublin balcony with herbs */
+    }
+    .identity__portrait:nth-child(2) {
+      background: linear-gradient(135deg, #a8c7a0, #6b9e5e);
+      /* Real image: parent and child planting together */
+    }
+    .identity__portrait:nth-child(3) {
+      background: linear-gradient(135deg, #c4a8d0, #8e6fa0);
+      /* Real image: older woman in a community garden */
+    }
+    .identity__portrait:nth-child(4) {
+      background: linear-gradient(135deg, #a0b8c7, #5e8a9e);
+      /* Real image: man tending tomatoes on rooftop */
+    }
+    .identity__portrait:nth-child(5) {
+      background: linear-gradient(135deg, #c7c4a0, #9e9a5e);
+      /* Real image: student-age person in garden setting */
+    }
+
+    @media (min-width: 640px) {
+      .identity__portrait { width: 80px; height: 80px; }
+    }
+
+    .identity__supporting {
+      font-size: var(--text-body);
+      color: var(--color-primary-dark);
+      opacity: 0.8;
+      max-width: var(--max-text);
+      margin: 0 auto;
+    }
+
+    /* =============================================================
+       SECTION 3: MICRO-STORIES
+       ============================================================= */
+    .stories__heading {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+
+    .stories__grid {
+      display: grid;
+      gap: var(--space-lg);
+      max-width: var(--max-content);
+      margin: 0 auto;
+    }
+
+    /* Mobile: horizontal scroll carousel */
+    @media (max-width: 639px) {
+      .stories__grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: var(--space-md);
+        padding-bottom: var(--space-md);
+        -webkit-overflow-scrolling: touch;
+      }
+      .stories__grid::-webkit-scrollbar { display: none; }
+      .story-card {
+        min-width: calc(100vw - 56px);
+        scroll-snap-align: center;
+        flex-shrink: 0;
+      }
+    }
+
+    @media (min-width: 640px) and (max-width: 1023px) {
+      .stories__grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .stories__grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .story-card {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      box-shadow: 0 2px 8px var(--color-shadow);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .story-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px var(--color-shadow-md);
+    }
+
+    .story-card__image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      /* Placeholder -- replace each with appropriate photo or illustration */
+    }
+    .story-card:nth-child(1) .story-card__image {
+      background: linear-gradient(135deg, #7ab87e, #4a8a50);
+      /* Real image: Niamh on her Phibsborough balcony with herb pots */
+    }
+    .story-card:nth-child(2) .story-card__image {
+      background: linear-gradient(135deg, #8ec48e, #5da05d);
+      /* Real image: Declan and Roisin planting kale in a yoghurt pot */
+    }
+    .story-card:nth-child(3) .story-card__image {
+      background: linear-gradient(135deg, #c4956e, #a07050);
+      /* Real image: Tomasz tending tomatoes on Smithfield rooftop */
+    }
+    .story-card:nth-child(4) .story-card__image {
+      background: linear-gradient(135deg, #9eb8a0, #708a72);
+      /* Real image: Margaret at her raised bed in Stoneybatter */
+    }
+
+    .story-card__body {
+      padding: var(--space-lg);
+    }
+
+    .story-card__location {
+      font-size: var(--text-label);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-warm-accent);
+      margin-bottom: var(--space-sm);
+    }
+
+    .story-card__hook {
+      font-size: var(--text-body);
+      line-height: 1.6;
+      color: var(--color-primary-dark);
+      margin-bottom: var(--space-md);
+    }
+
+    .story-card__full {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+      font-size: var(--text-body);
+      line-height: 1.7;
+      color: var(--color-primary-dark);
+      opacity: 0.9;
+    }
+    .story-card__full.open {
+      max-height: 600px;
+    }
+
+    .story-card__toggle {
+      background: none;
+      border: none;
+      color: var(--color-primary-green);
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm);
+      font-weight: 500;
+      cursor: pointer;
+      padding: var(--space-xs) 0;
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+    }
+    .story-card__toggle:hover { text-decoration: underline; }
+
+    .stories__dots {
+      display: flex;
+      justify-content: center;
+      gap: var(--space-sm);
+      margin-top: var(--space-md);
+    }
+    .stories__dot {
+      width: 8px;
+      height: 8px;
+      border-radius: var(--radius-full);
+      background: var(--color-cool-neutral);
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .stories__dot.active {
+      background: var(--color-primary-green);
+    }
+    @media (min-width: 640px) {
+      .stories__dots { display: none; }
+    }
+
+    /* =============================================================
+       SECTION 4: YEAH, BUT... (OBJECTIONS ACCORDION)
+       ============================================================= */
+    .objections__list {
+      max-width: var(--max-text);
+      margin: 0 auto;
+      list-style: none;
+    }
+
+    .objection {
+      border-bottom: 1px solid rgba(142, 155, 151, 0.3);
+    }
+
+    .objection__trigger {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+      padding: var(--space-lg) 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-body);
+      font-size: var(--text-subsection);
+      font-weight: 600;
+      color: var(--color-primary-dark);
+      line-height: 1.3;
+    }
+    .objection__trigger:hover {
+      color: var(--color-primary-green);
+    }
+
+    .objection__chevron {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s ease;
+      color: var(--color-cool-neutral);
+    }
+    .objection.open .objection__chevron {
+      transform: rotate(180deg);
+    }
+
+    .objection__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    }
+    .objection.open .objection__answer {
+      max-height: 300px;
+    }
+
+    .objection__answer-inner {
+      padding-bottom: var(--space-lg);
+      font-size: var(--text-body);
+      line-height: 1.7;
+      color: var(--color-primary-dark);
+      opacity: 0.9;
+    }
+
+    /* =============================================================
+       SECTION 5: HERB POT CHALLENGE
+       ============================================================= */
+    .challenge {
+      background: var(--color-warm-light);
+      padding: var(--space-3xl) 0;
+    }
+
+    .challenge__card {
+      max-width: var(--max-card);
+      margin: 0 auto;
+      border-left: 4px solid var(--color-warm-accent);
+      padding-left: var(--space-lg);
+    }
+
+    .challenge__label {
+      font-size: var(--text-label);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-primary-green);
+      margin-bottom: var(--space-md);
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+
+    .challenge__headline {
+      font-family: var(--font-heading);
+      font-size: var(--text-section);
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--color-primary-dark);
+      margin-bottom: var(--space-xl);
+    }
+
+    .challenge__steps {
+      list-style: none;
+      margin-bottom: var(--space-xl);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+    }
+
+    .challenge__step {
+      display: flex;
+      gap: var(--space-md);
+      align-items: flex-start;
+      font-size: var(--text-body-lg);
+      line-height: 1.6;
+    }
+
+    .challenge__step-icon {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      background: var(--color-primary-green);
+      color: var(--color-white);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: var(--text-body);
+    }
+
+    .challenge__stats {
+      display: flex;
+      gap: var(--space-xl);
+      flex-wrap: wrap;
+      margin-bottom: var(--space-lg);
+    }
+
+    .challenge__stat {
+      text-align: center;
+      flex: 1;
+      min-width: 100px;
+    }
+
+    .challenge__stat-value {
+      font-family: var(--font-heading);
+      font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
+      color: var(--color-primary-dark);
+      display: block;
+      line-height: 1.1;
+    }
+
+    .challenge__stat-label {
+      font-size: var(--text-body-sm);
+      color: var(--color-cool-neutral);
+      display: block;
+      margin-top: var(--space-xs);
+    }
+
+    .challenge__nudge {
+      font-size: var(--text-body);
+      font-style: italic;
+      color: var(--color-primary-dark);
+      opacity: 0.85;
+      margin-bottom: var(--space-xl);
+    }
+
+    .challenge__actions {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      align-items: flex-start;
+    }
+    @media (min-width: 640px) {
+      .challenge__actions {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .challenge__share {
+      font-size: var(--text-body-sm);
+      color: var(--color-primary-green);
+      font-weight: 500;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: var(--font-body);
+    }
+    .challenge__share:hover { text-decoration: underline; }
+
+    /* =============================================================
+       SECTION 6: WHAT CAN I GROW? (RECOMMENDER QUIZ)
+       ============================================================= */
+    .quiz__intro {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+
+    .quiz__intro p {
+      font-size: var(--text-body-lg);
+      color: var(--color-primary-dark);
+      opacity: 0.85;
+    }
+
+    .quiz__container {
+      max-width: 640px;
+      margin: 0 auto;
+      min-height: 300px;
+      position: relative;
+    }
+
+    .quiz__step {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-lg);
+    }
+    .quiz__step.active {
+      display: flex;
+      animation: fadeSlideIn 0.3s ease-out;
+    }
+
+    @keyframes fadeSlideIn {
+      from { opacity: 0; transform: translateX(20px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      @keyframes fadeSlideIn {
+        from { opacity: 1; transform: none; }
+        to { opacity: 1; transform: none; }
+      }
+    }
+
+    .quiz__step-label {
+      font-size: var(--text-body-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-cool-neutral);
+    }
+
+    .quiz__question {
+      font-family: var(--font-heading);
+      font-size: var(--text-subsection);
+      text-align: center;
+    }
+
+    .quiz__options {
+      display: flex;
+      gap: var(--space-md);
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .quiz__option {
+      flex: 1;
+      min-width: 140px;
+      max-width: 180px;
+      padding: var(--space-lg) var(--space-md);
+      background: var(--color-white);
+      border: 2px solid rgba(142, 155, 151, 0.3);
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      text-align: center;
+      font-family: var(--font-body);
+      font-size: var(--text-body);
+      font-weight: 500;
+      color: var(--color-primary-dark);
+      transition: border-color 0.15s ease, transform 0.15s ease, opacity 0.15s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-sm);
+    }
+    .quiz__option:hover {
+      border-color: var(--color-primary-green);
+    }
+    .quiz__option.selected {
+      border-color: var(--color-primary-green);
+      border-width: 3px;
+      transform: scale(1.03);
+    }
+    .quiz__option.dimmed {
+      opacity: 0.6;
+    }
+
+    .quiz__option-icon {
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+    .quiz__result {
+      display: none;
+      background: var(--color-warm-light);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      width: 100%;
+      animation: fadeSlideUp 0.4s ease-out;
+    }
+    .quiz__result.active { display: block; }
+
+    @keyframes fadeSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      @keyframes fadeSlideUp {
+        from { opacity: 1; transform: none; }
+        to { opacity: 1; transform: none; }
+      }
+    }
+
+    .quiz__result-title {
+      font-size: var(--text-label);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-primary-green);
+      margin-bottom: var(--space-lg);
+    }
+
+    .quiz__plant {
+      display: flex;
+      gap: var(--space-md);
+      align-items: flex-start;
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid rgba(142, 155, 151, 0.2);
+    }
+    .quiz__plant:last-child { border-bottom: none; }
+
+    .quiz__plant-icon { font-size: 1.5rem; flex-shrink: 0; line-height: 1.4; }
+    .quiz__plant-name { font-weight: 600; }
+    .quiz__plant-tip {
+      font-size: var(--text-body-sm);
+      color: var(--color-primary-dark);
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+
+    .quiz__reset {
+      display: inline-block;
+      margin-top: var(--space-lg);
+      font-size: var(--text-body-sm);
+      color: var(--color-primary-green);
+      font-weight: 500;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+    .quiz__reset:hover { text-decoration: underline; }
+
+    /* =============================================================
+       SECTION 7: GROWING JOURNEY
+       ============================================================= */
+    .journey__path {
+      max-width: var(--max-card);
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* Mobile: vertical timeline */
+    .journey__step {
+      display: flex;
+      gap: var(--space-md);
+      padding-bottom: var(--space-xl);
+      position: relative;
+    }
+    .journey__step:last-child { padding-bottom: 0; }
+
+    .journey__step::before {
+      content: '';
+      position: absolute;
+      left: 19px;
+      top: 40px;
+      bottom: 0;
+      width: 2px;
+      background: var(--color-progress-track);
+    }
+    .journey__step:last-child::before { display: none; }
+
+    .journey__node {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-full);
+      background: var(--color-primary-green);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      font-size: var(--text-body-sm);
+      z-index: 1;
+    }
+
+    .journey__content { flex: 1; }
+
+    .journey__title {
+      font-weight: 600;
+      font-size: var(--text-card-title);
+      margin-bottom: var(--space-xs);
+    }
+
+    .journey__desc {
+      font-size: var(--text-body-sm);
+      color: var(--color-primary-dark);
+      opacity: 0.85;
+      line-height: 1.6;
+    }
+
+    .journey__badge {
+      display: inline-block;
+      font-size: var(--text-label);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-warm-accent);
+      background: var(--color-warm-light);
+      padding: 2px var(--space-sm);
+      border-radius: var(--radius-sm);
+      margin-bottom: var(--space-xs);
+    }
+
+    .journey__step.future { opacity: 0.5; }
+    .journey__step.future .journey__node {
+      background: var(--color-cool-neutral);
+    }
+
+    /* Desktop: horizontal layout */
+    @media (min-width: 1024px) {
+      .journey__path {
+        display: flex;
+        gap: 0;
+        align-items: flex-start;
+      }
+      .journey__step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        flex: 1;
+        padding-bottom: 0;
+      }
+      .journey__step::before {
+        left: 50%;
+        top: 20px;
+        bottom: auto;
+        width: 100%;
+        height: 2px;
+      }
+      .journey__step:last-child::before { display: none; }
+      .journey__node { margin-bottom: var(--space-md); }
+      .journey__content { max-width: 160px; }
+    }
+
+    /* =============================================================
+       SECTION 8: DUBLIN MAP
+       ============================================================= */
+    .map__wrapper {
+      max-width: var(--max-card);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .map__subtitle {
+      font-size: var(--text-body-lg);
+      color: var(--color-primary-dark);
+      opacity: 0.85;
+      margin-bottom: var(--space-xl);
+    }
+
+    .map__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+      max-width: 600px;
+      margin: 0 auto var(--space-xl);
+    }
+    @media (min-width: 640px) {
+      .map__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    .map__area {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg) var(--space-md);
+      box-shadow: 0 2px 8px var(--color-shadow);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      text-align: center;
+      border: 2px solid transparent;
+    }
+    .map__area:hover, .map__area:focus {
+      transform: scale(1.02);
+      box-shadow: 0 4px 16px var(--color-shadow-md);
+      border-color: var(--color-primary-green);
+    }
+    .map__area.active-area {
+      background-color: var(--color-progress-track);
+    }
+    .map__area.no-site {
+      opacity: 0.6;
+    }
+
+    .map__area-name {
+      font-weight: 600;
+      font-size: var(--text-body);
+      margin-bottom: var(--space-xs);
+    }
+
+    .map__area-count {
+      font-size: var(--text-body-sm);
+      color: var(--color-primary-green);
+      font-weight: 500;
+    }
+
+    .map__area-growing {
+      font-size: var(--text-body-sm);
+      color: var(--color-cool-neutral);
+      margin-top: var(--space-xs);
+    }
+
+    .map__detail {
+      display: none;
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      box-shadow: 0 4px 16px var(--color-shadow-md);
+      text-align: left;
+      max-width: 400px;
+      margin: var(--space-md) auto 0;
+      border-left: 4px solid var(--color-primary-green);
+      animation: fadeSlideUp 0.3s ease-out;
+    }
+    .map__detail.visible { display: block; }
+
+    .map__detail-title {
+      font-weight: 600;
+      font-size: var(--text-card-title);
+      margin-bottom: var(--space-sm);
+    }
+    .map__detail-info {
+      font-size: var(--text-body-sm);
+      line-height: 1.7;
+      color: var(--color-primary-dark);
+      opacity: 0.9;
+    }
+
+    .map__cta {
+      font-size: var(--text-body);
+      color: var(--color-primary-dark);
+      opacity: 0.75;
+      margin-top: var(--space-lg);
+      text-align: center;
+    }
+
+    /* =============================================================
+       SECTION 9: SEASONAL TIMELINE
+       ============================================================= */
+    .seasonal__strip {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: var(--space-md);
+      padding: var(--space-md) 20px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .seasonal__strip::-webkit-scrollbar { height: 4px; }
+    .seasonal__strip::-webkit-scrollbar-track { background: transparent; }
+    .seasonal__strip::-webkit-scrollbar-thumb { background: var(--color-cool-neutral); border-radius: 2px; }
+
+    .seasonal__month {
+      flex-shrink: 0;
+      width: 140px;
+      padding: var(--space-lg) var(--space-md);
+      border-radius: var(--radius-md);
+      background: var(--color-primary-light);
+      scroll-snap-align: center;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .seasonal__month.current {
+      background: var(--color-primary-green);
+      color: var(--color-white);
+      transform: scale(1.1);
+      width: 160px;
+    }
+
+    .seasonal__month-name {
+      font-weight: 600;
+      font-size: var(--text-body);
+      margin-bottom: var(--space-sm);
+    }
+    .seasonal__month.current .seasonal__month-name { color: var(--color-white); }
+
+    .seasonal__month-icon {
+      font-size: 1.5rem;
+      margin-bottom: var(--space-sm);
+    }
+
+    .seasonal__month-text {
+      font-size: var(--text-body-sm);
+      line-height: 1.5;
+      opacity: 0.85;
+    }
+    .seasonal__month.current .seasonal__month-text { opacity: 1; color: rgba(255,255,255,0.9); }
+
+    /* =============================================================
+       SECTION 10: COLLECTIVE GOAL TRACKER
+       ============================================================= */
+    .goal__wrapper {
+      max-width: var(--max-card);
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .goal__number {
+      font-family: var(--font-heading);
+      font-size: var(--text-counter);
+      color: var(--color-primary-green);
+      line-height: 1;
+      margin-bottom: var(--space-sm);
+    }
+
+    .goal__label {
+      font-size: var(--text-body-lg);
+      color: var(--color-primary-dark);
+      margin-bottom: var(--space-lg);
+    }
+
+    .goal__bar {
+      width: 100%;
+      height: 16px;
+      background: var(--color-progress-track);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: var(--space-lg);
+    }
+
+    .goal__fill {
+      height: 100%;
+      width: 0;
+      background: var(--color-primary-green);
+      border-radius: 8px;
+      transition: width 1.5s cubic-bezier(0, 0, 0.2, 1);
+    }
+    .goal__fill.animated {
+      width: var(--goal-percent);
+    }
+
+    .goal__text {
+      font-size: var(--text-body);
+      color: var(--color-primary-dark);
+      opacity: 0.8;
+      max-width: var(--max-text);
+      margin: 0 auto;
+    }
+
+    /* =============================================================
+       SECTION 11: FINAL CTA
+       ============================================================= */
+    .final-cta {
+      text-align: center;
+      padding: var(--space-5xl) 0;
+      /* Placeholder background -- same as hero treatment */
+      background:
+        linear-gradient(rgba(44, 62, 45, 0.7), rgba(44, 62, 45, 0.8)),
+        linear-gradient(135deg, #4a6741 0%, #2C3E2D 40%, #5a4a3a 70%, #8E9B97 100%);
+      color: var(--color-white);
+    }
+
+    .final-cta__headline {
+      font-family: var(--font-heading);
+      font-size: var(--text-section);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: var(--space-md);
+    }
+
+    .final-cta__sub {
+      font-size: var(--text-body-lg);
+      opacity: 0.9;
+      margin-bottom: var(--space-xl);
+    }
+
+    .final-cta .btn--primary {
+      font-size: clamp(1.125rem, 1vw + 0.75rem, 1.25rem);
+      padding: var(--space-md) var(--space-2xl);
+    }
+
+    .final-cta__links {
+      display: flex;
+      gap: var(--space-lg);
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: var(--space-lg);
+    }
+    .final-cta__links a {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: var(--text-body-sm);
+    }
+    .final-cta__links a:hover { color: var(--color-white); text-decoration: underline; }
+
+    .final-cta__closing {
+      margin-top: var(--space-2xl);
+      font-family: var(--font-heading);
+      font-size: var(--text-body-lg);
+      opacity: 0.7;
+    }
+
+    /* =============================================================
+       SECTION 12: FOOTER & AGENTS PANEL
+       ============================================================= */
+    .footer {
+      background: var(--color-primary-dark);
+      color: rgba(255, 255, 255, 0.7);
+      padding: var(--space-2xl) 0 var(--space-lg);
+    }
+
+    .footer__top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-xl);
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: var(--space-xl);
+    }
+
+    .footer__brand {
+      font-family: var(--font-heading);
+      font-size: var(--text-subsection);
+      color: var(--color-white);
+      margin-bottom: var(--space-sm);
+    }
+
+    .footer__tagline {
+      font-size: var(--text-body-sm);
+      max-width: 300px;
+    }
+
+    .footer__links {
+      display: flex;
+      gap: var(--space-lg);
+    }
+    .footer__links a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: var(--text-body-sm);
+    }
+    .footer__links a:hover { color: var(--color-white); }
+
+    .footer__copy {
+      font-size: var(--text-body-sm);
+      opacity: 0.5;
+      text-align: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: var(--space-lg);
+    }
+
+    /* Agents Panel */
+    .agents-panel {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: var(--space-xl);
+      padding-top: var(--space-lg);
+    }
+
+    .agents-panel__trigger {
+      width: 100%;
+      background: none;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-sm);
+      color: rgba(255, 255, 255, 0.8);
+      padding: var(--space-md) var(--space-lg);
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: border-color 0.2s;
+      text-align: left;
+    }
+    .agents-panel__trigger:hover {
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .agents-panel__label-note {
+      font-size: var(--text-label);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-info-blue);
+      margin-bottom: var(--space-xs);
+    }
+
+    .agents-panel__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out;
+    }
+    .agents-panel__content.open {
+      max-height: 3000px;
+    }
+
+    .agents-panel__grid {
+      display: grid;
+      gap: var(--space-lg);
+      padding-top: var(--space-xl);
+    }
+    @media (min-width: 640px) {
+      .agents-panel__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1024px) {
+      .agents-panel__grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    .agent-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+    }
+
+    .agent-card__number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: var(--color-info-blue);
+      color: var(--color-white);
+      font-size: var(--text-body-sm);
+      font-weight: 600;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-sm);
+    }
+
+    .agent-card__role {
+      font-weight: 600;
+      font-size: var(--text-body);
+      color: var(--color-white);
+      margin-bottom: var(--space-xs);
+    }
+
+    .agent-card__expertise {
+      font-size: var(--text-body-sm);
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: var(--space-md);
+      font-style: italic;
+    }
+
+    .agent-card__contributions {
+      list-style: none;
+      font-size: var(--text-body-sm);
+      line-height: 1.6;
+    }
+    .agent-card__contributions li {
+      padding-left: var(--space-md);
+      position: relative;
+      margin-bottom: var(--space-xs);
+    }
+    .agent-card__contributions li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--color-info-blue);
+    }
+
+    /* ===== BACK TO TOP ===== */
+    .back-to-top {
+      position: fixed;
+      bottom: var(--space-lg);
+      right: var(--space-lg);
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-full);
+      background: var(--color-primary-green);
+      color: var(--color-white);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px var(--color-shadow-md);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.2s ease;
+      z-index: 100;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    .back-to-top:hover {
+      transform: translateY(-2px);
+      background: var(--color-primary-green-dark);
+    }
+
+    /* ===== NAV BAR (subtle, appears on scroll) ===== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: rgba(44, 62, 45, 0.95);
+      backdrop-filter: blur(8px);
+      padding: var(--space-sm) 0;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
+    }
+    .nav.visible { transform: translateY(0); }
+
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav__brand {
+      font-family: var(--font-heading);
+      font-size: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
+      color: var(--color-white);
+      text-decoration: none;
+    }
+
+    .nav__links {
+      display: flex;
+      gap: var(--space-lg);
+      list-style: none;
+    }
+    .nav__links a {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: var(--text-body-sm);
+      font-weight: 500;
+    }
+    .nav__links a:hover { color: var(--color-white); }
+    @media (max-width: 639px) {
+      .nav__links { display: none; }
+    }
+
+    .nav__cta {
+      font-size: var(--text-body-sm) !important;
+      padding: var(--space-sm) var(--space-md) !important;
+    }
+
+    .nav__methodology-link {
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: var(--radius-sm);
+      padding: 2px 10px;
+      font-size: var(--text-label) !important;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .nav__methodology-link:hover {
+      background: rgba(255,255,255,0.12);
+    }
+
+    /* ===== AGENTS OVERLAY ===== */
+    .agents-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 500;
+      background: rgba(44, 62, 45, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      overflow-y: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.35s ease, visibility 0.35s ease;
+    }
+    .agents-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+    .agents-overlay__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-lg) var(--space-xl);
+      position: sticky;
+      top: 0;
+      background: rgba(44, 62, 45, 0.97);
+      z-index: 2;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .agents-overlay__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-subsection);
+      color: var(--color-white);
+    }
+    .agents-overlay__subtitle {
+      font-size: var(--text-body-sm);
+      color: rgba(255,255,255,0.6);
+      margin-top: var(--space-xs);
+    }
+    .agents-overlay__close {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-full);
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--color-white);
+      transition: background 0.2s ease;
+      flex-shrink: 0;
+    }
+    .agents-overlay__close:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .agents-overlay__body {
+      max-width: var(--max-content);
+      margin: 0 auto;
+      padding: var(--space-2xl) var(--space-xl) var(--space-4xl);
+    }
+    .agents-overlay__intro {
+      color: rgba(255,255,255,0.8);
+      font-size: var(--text-body);
+      max-width: var(--max-text);
+      line-height: 1.7;
+      margin-bottom: var(--space-2xl);
+    }
+    .agents-overlay__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+    }
+    @media (min-width: 640px) {
+      .agents-overlay__grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 1024px) {
+      .agents-overlay__grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .agents-overlay .agent-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+    }
+    .agents-overlay .agent-card__number {
+      font-family: var(--font-heading);
+      font-size: var(--text-counter);
+      color: rgba(255,255,255,0.1);
+      line-height: 1;
+      margin-bottom: var(--space-xs);
+      font-size: clamp(2rem, 4vw, 3rem);
+    }
+    .agents-overlay .agent-card__role {
+      font-family: var(--font-heading);
+      font-size: var(--text-card-title);
+      color: var(--color-white);
+      margin-bottom: var(--space-sm);
+    }
+    .agents-overlay .agent-card__expertise {
+      font-size: var(--text-body-sm);
+      color: rgba(255,255,255,0.5);
+      margin-bottom: var(--space-md);
+      font-style: italic;
+    }
+    .agents-overlay .agent-card__contributions {
+      list-style: none;
+      padding: 0;
+    }
+    .agents-overlay .agent-card__contributions li {
+      font-size: var(--text-body-sm);
+      color: rgba(255,255,255,0.75);
+      padding-left: var(--space-md);
+      position: relative;
+      margin-bottom: var(--space-sm);
+      line-height: 1.5;
+    }
+    .agents-overlay .agent-card__contributions li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-primary-green);
+    }
+    .agent-card__btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: var(--space-md);
+      padding: 8px 16px;
+      font-family: var(--font-body);
+      font-size: var(--text-body-sm);
+      font-weight: 500;
+      color: var(--color-white);
+      background: var(--color-primary-green);
+      border: none;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+    .agent-card__btn:hover {
+      background: var(--color-primary-green-dark);
+      color: var(--color-white);
+      transform: translateY(-1px);
+    }
+    .agent-card__btn--disabled {
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.4);
+      cursor: default;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .agent-card__btn--disabled:hover {
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.4);
+      transform: none;
+    }
+    .agents-overlay__footer-note {
+      margin-top: var(--space-2xl);
+      padding-top: var(--space-lg);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.5);
+      font-size: var(--text-body-sm);
+      max-width: var(--max-text);
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip to content link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Fixed navigation (appears on scroll) -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="#" class="nav__brand">Rooftop Republic</a>
+      <ul class="nav__links">
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#herb-pot-challenge">The Challenge</a></li>
+        <li><a href="#quiz">What Can I Grow?</a></li>
+        <li><a href="#map">Find a Rooftop</a></li>
+        <li><a href="#" class="nav__methodology-link" onclick="openAgentsOverlay(event)">Methodology</a></li>
+      </ul>
+      <a href="#herb-pot-challenge" class="btn btn--primary nav__cta">Start Growing</a>
+    </div>
+  </nav>
+
+  <!-- ===== AGENTS / METHODOLOGY OVERLAY ===== -->
+  <div class="agents-overlay" id="agents-overlay" role="dialog" aria-modal="true" aria-label="Methodology - AI Agents Used">
+    <div class="agents-overlay__header">
+      <div>
+        <div class="agents-overlay__title">Academic / Methodology</div>
+        <div class="agents-overlay__subtitle">The 5 AI Agents Behind This Landing Page</div>
+      </div>
+      <button class="agents-overlay__close" aria-label="Close methodology panel" onclick="closeAgentsOverlay()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="agents-overlay__body">
+      <p class="agents-overlay__intro">
+        This landing page was designed and built as part of the <strong style="color:var(--color-white);">10,000 Hours of Play Challenge</strong> for the Customer Engagement &amp; AI module at the National College of Ireland (MSc in AI for Business). The project used a team of 5 specialised AI agents, each contributing distinct expertise to the final product. Below is each agent's role and their specific contributions.
+      </p>
+      <div class="agents-overlay__grid">
+
+        <div class="agent-card">
+          <div class="agent-card__number">01</div>
+          <div class="agent-card__role">Gamification Expert</div>
+          <div class="agent-card__expertise">Octalysis Framework, Games for Good, Motivational Design</div>
+          <ul class="agent-card__contributions">
+            <li>Mapped all 8 Octalysis core drives to the Rooftop Republic challenge</li>
+            <li>Designed the visitor journey across 4 experience phases (Discovery, Onboarding, Scaffolding, Endgame)</li>
+            <li>Specified interactive gamification elements: counters, quiz, progression path, challenge card</li>
+            <li>Established the 80/20 White Hat / Black Hat motivational balance</li>
+          </ul>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="report-viewer.html?report=01-gamification-expert-prompt" target="_blank" class="agent-card__btn" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              System Prompt
+            </a>
+            <a href="report-viewer.html?report=01-gamification-expert-report" target="_blank" class="agent-card__btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              View Report
+            </a>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-card__number">02</div>
+          <div class="agent-card__role">Urban Farming &amp; Community Expert</div>
+          <div class="agent-card__expertise">8+ years in community growing, Dublin urban farming, seasonal realities</div>
+          <ul class="agent-card__contributions">
+            <li>Diagnosed the psychological barriers: identity, failure fear, knowledge gap, time, suitability</li>
+            <li>Created 6 micro-stories grounded in real Dublin neighbourhoods and personas</li>
+            <li>Designed the "First Step Strategy" staircase from herb pot to rooftop leader</li>
+            <li>Provided seasonal growing data, realistic costs, and honest objection answers</li>
+          </ul>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="report-viewer.html?report=02-urban-farming-expert-prompt" target="_blank" class="agent-card__btn" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              System Prompt
+            </a>
+            <a href="report-viewer.html?report=02-urban-farming-expert-report" target="_blank" class="agent-card__btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              View Report
+            </a>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-card__number">03</div>
+          <div class="agent-card__role">Designer</div>
+          <div class="agent-card__expertise">12+ years in landing pages, gamified experiences, human-centred design</div>
+          <ul class="agent-card__contributions">
+            <li>Mapped the emotional arc from scepticism through confidence to action</li>
+            <li>Designed the full 12-section page structure and visual design system</li>
+            <li>Specified colour palette, typography, spacing, and all responsive breakpoints</li>
+            <li>Created interaction specifications for every animated and interactive element</li>
+          </ul>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="report-viewer.html?report=03-designer-prompt" target="_blank" class="agent-card__btn" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              System Prompt
+            </a>
+            <a href="report-viewer.html?report=03-designer-report" target="_blank" class="agent-card__btn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              View Report
+            </a>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-card__number">04</div>
+          <div class="agent-card__role">Coder / Builder</div>
+          <div class="agent-card__expertise">Performant, accessible static sites. HTML, CSS, vanilla JavaScript.</div>
+          <ul class="agent-card__contributions">
+            <li>Built the complete landing page from the design specification as a single deployable file</li>
+            <li>Implemented all interactive elements: quiz, counters, accordion, carousel, map, timeline</li>
+            <li>Ensured WCAG 2.1 AA accessibility, keyboard navigation, and screen reader support</li>
+            <li>Optimised for performance: no dependencies, no frameworks, fast loading</li>
+          </ul>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="report-viewer.html?report=04-coder-prompt" target="_blank" class="agent-card__btn" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              System Prompt
+            </a>
+            <span class="agent-card__btn agent-card__btn--disabled">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              Report: This Page
+            </span>
+          </div>
+        </div>
+
+        <div class="agent-card">
+          <div class="agent-card__number">05</div>
+          <div class="agent-card__role">Brand Communicator &amp; Copywriter</div>
+          <div class="agent-card__expertise">Dublin voice, community communication, behavioural copywriting</div>
+          <ul class="agent-card__contributions">
+            <li>Wrote all page copy in an authentic Dublin tone: warm, direct, never corporate</li>
+            <li>Crafted headlines, CTAs, micro-story adaptations, and objection answers</li>
+            <li>Ensured every word earns its place and speaks to the visitor as a person</li>
+            <li>Established the voice principle: "text from a mate, not brand communication"</li>
+          </ul>
+          <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+            <a href="report-viewer.html?report=05-communicator-prompt" target="_blank" class="agent-card__btn" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+              System Prompt
+            </a>
+            <span class="agent-card__btn agent-card__btn--disabled">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+              Coming Soon
+            </span>
+          </div>
+        </div>
+
+      </div>
+      <p class="agents-overlay__footer-note">
+        Each agent was defined with a detailed persona, knowledge base, and design principles. They collaborated sequentially: the Urban Farming Expert diagnosed the problem, the Gamification Expert designed the motivational strategy, the Designer created the full specification, the Communicator shaped the voice, and the Developer built the final product. All agent definitions and reports are available in the project repository.
+      </p>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ===============================================================
+         SECTION 1: HERO
+         =============================================================== -->
+    <section class="hero" aria-label="Introduction">
+      <h1 class="hero__headline">Dublin Has Thousands of Empty Rooftops. We're Turning Them Into Gardens.</h1>
+
+      <div class="hero__counters" role="group" aria-label="Community statistics">
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-target="40" aria-label="40 active rooftop gardens">40</span>
+          <span class="hero__stat-label">Rooftops</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-target="250" aria-label="Over 250 active growers">250+</span>
+          <span class="hero__stat-label">Growers</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" data-target="1" aria-label="One city, growing">1</span>
+          <span class="hero__stat-label">City, Growing</span>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <svg class="hero__scroll-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===============================================================
+         SECTION 2: IDENTITY SHIFT
+         =============================================================== -->
+    <section class="section section--mist identity" aria-label="Who this is for">
+      <div class="container">
+        <p class="identity__statement reveal">You don't need to know anything about gardening. You don't need a big rooftop. You don't even need a rooftop. You need a pot, some soil, and ten minutes this Saturday.</p>
+
+        <div class="identity__portraits reveal reveal-delay-1" role="img" aria-label="Diverse community members of Rooftop Republic">
+          <!-- Placeholder portraits -- replace with real candid photos of Dublin growers -->
+          <div class="identity__portrait" aria-hidden="true"></div>
+          <div class="identity__portrait" aria-hidden="true"></div>
+          <div class="identity__portrait" aria-hidden="true"></div>
+          <div class="identity__portrait" aria-hidden="true"></div>
+          <div class="identity__portrait" aria-hidden="true"></div>
+        </div>
+
+        <p class="identity__supporting reveal reveal-delay-2">Our growers include software engineers, retired teachers, nurses, builders, students, and parents. The common thread isn't a green thumb -- it's curiosity.</p>
+      </div>
+    </section>
+
+    <!-- ===============================================================
+         SECTION 3: MICRO-STORIES
+         =============================================================== -->
+    <section id="stories" class="section section--white" aria-label="Community stories">
+      <div class="container">
+        <h2 class="heading-section stories__heading reveal">People Like You Already Do This</h2>
+
+        <div class="stories__grid" role="list">
+
+          <!-- Story 1: Niamh -->
+          <article class="story-card reveal" role="listitem">
+            <div class="story-card__image" role="img" aria-label="Young woman tending herbs on a Dublin balcony"></div>
+            <div class="story-card__body">
+              <div class="story-card__location">Phibsborough</div>
+              <p class="story-card__hook">Niamh bought a &euro;1.99 basil plant from Tesco to make pesto. Instead of letting it die on the kitchen windowsill like usual, she repotted it into a bigger container on her balcony.</p>
+              <div class="story-card__full" id="story-1">
+                <p>It survived. Then it thrived. She started picking leaves every evening for dinner. That single basil plant led to three more pots -- parsley, mint, chives -- then a conversation with her upstairs neighbour who was doing the same thing, then a visit to the Rooftop Republic site on Manor Street. That was April 2025. She now looks after six containers on the building's rooftop and teaches new growers on Saturday mornings. It started with pesto.</p>
+              </div>
+              <button class="story-card__toggle" aria-expanded="false" aria-controls="story-1" onclick="toggleStory(this)">Read more <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <!-- Story 2: Roisin's Kale -->
+          <article class="story-card reveal reveal-delay-1" role="listitem">
+            <div class="story-card__image" role="img" aria-label="Parent and child planting kale seeds together"></div>
+            <div class="story-card__body">
+              <div class="story-card__location">Rathmines</div>
+              <p class="story-card__hook">Declan's seven-year-old, Roisin, would not eat a green vegetable. Full stop. Non-negotiable. Then the family joined the Rathmines rooftop for a Saturday drop-in.</p>
+              <div class="story-card__full" id="story-2">
+                <p>Roisin planted kale seeds in a yoghurt pot. She watered them every day. She watched them sprout. She named the biggest one Kevin. When Kevin the kale was big enough to pick, she ate it raw on the rooftop and said it was "not disgusting." Declan says it's the single greatest parenting achievement of his life.</p>
+              </div>
+              <button class="story-card__toggle" aria-expanded="false" aria-controls="story-2" onclick="toggleStory(this)">Read more <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <!-- Story 3: Tomasz -->
+          <article class="story-card reveal reveal-delay-2" role="listitem">
+            <div class="story-card__image" role="img" aria-label="Man tending tomato plants on a Dublin rooftop"></div>
+            <div class="story-card__body">
+              <div class="story-card__location">Smithfield</div>
+              <p class="story-card__hook">Tomasz moved from Lublin to Smithfield in 2006. He'd grown up with his babcia's enormous vegetable garden but hadn't planted anything in twenty years.</p>
+              <div class="story-card__full" id="story-3">
+                <p>When Rooftop Republic started a site on his block, he signed up to be polite. Within a month, he was growing tomatoes, dill, and cucumbers -- the same things his grandmother grew. He started pickling cucumbers on the rooftop and sharing jars with neighbours. The Irish lads call him the Pickle King. He taught three of them how to grow dill. His grandmother would be proud.</p>
+              </div>
+              <button class="story-card__toggle" aria-expanded="false" aria-controls="story-3" onclick="toggleStory(this)">Read more <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <!-- Story 4: Margaret -->
+          <article class="story-card reveal reveal-delay-3" role="listitem">
+            <div class="story-card__image" role="img" aria-label="Older woman at a raised garden bed, cup of tea nearby"></div>
+            <div class="story-card__body">
+              <div class="story-card__location">Stoneybatter</div>
+              <p class="story-card__hook">Margaret had been retired for eighteen months and the days were getting long. She saw a Rooftop Republic flyer in the Stoneybatter post office and nearly didn't go.</p>
+              <div class="story-card__full" id="story-4">
+                <p>"I'd only be in the way," she thought. She went anyway. They gave her a raised bed at hip height so she wouldn't have to kneel (her knee is gone). She grows lettuce, radishes, and herbs. She says the gardening is grand but what she really comes for is the tea and the chat afterwards. She hasn't missed a Saturday since she started.</p>
+              </div>
+              <button class="story-card__toggle" aria-expanded="false" aria-controls="story-4" onclick="toggleStory(this)">Read more <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Pagination dots (mobile only) -->
+        <div class="stories__dots" role="tablist" aria-label="Story navigation">
+          <button class="stories__dot active" aria-label="Story 1" role="tab" aria-selected="true"></button>
+          <button class="stories__dot" aria-label="Story 2" role="tab" aria-selected="false"></button>
+          <button class="stories__dot" aria-label="Story 3" role="tab" aria-selected="false"></button>
+          <button class="stories__dot" aria-label="Story 4" role="tab" aria-selected="false"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===============================================================
+         SECTION 4: YEAH, BUT... (OBJECTIONS)
+         =============================================================== -->
+    <section class="section section--mist" aria-label="Common questions and honest answers">
+      <div class="container">
+        <h2 class="heading-section reveal">Yeah, But...</h2>
+
+        <div class="objections__list text-container" role="list">
+
+          <!-- Objection 1 (open by default) -->
+          <div class="objection open reveal" role="listitem">
+            <button class="objection__trigger" aria-expanded="true" onclick="toggleObjection(this)">
+              <span>"I kill every plant I've ever owned."</span>
+              <svg class="objection__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="objection__answer">
+              <div class="objection__answer-inner">
+                Houseplants are actually harder than outdoor vegetables. Outdoor plants have rain, natural light cycles, and soil biology on their side. You've probably been overwatering your indoor plants in a dark apartment. Outdoor growing is more forgiving than you think. And yes, some things will die. That's not failure -- that's gardening.
+              </div>
+            </div>
+          </div>
+
+          <!-- Objection 2 -->
+          <div class="objection reveal reveal-delay-1" role="listitem">
+            <button class="objection__trigger" aria-expanded="false" onclick="toggleObjection(this)">
+              <span>"Dublin weather is too miserable for growing."</span>
+              <svg class="objection__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="objection__answer">
+              <div class="objection__answer-inner">
+                Dublin gets about 750mm of rain a year, spread fairly evenly. That's almost perfect for growing leafy greens and herbs. Kale, chard, lettuce, spinach, and herbs thrive in our mild, damp climate. London gardeners are genuinely jealous of our rainfall. The honest limitation: we don't get enough heat for peppers or aubergines outdoors. But your salad and herbs will be magnificent.
+              </div>
+            </div>
+          </div>
+
+          <!-- Objection 3 -->
+          <div class="objection reveal reveal-delay-1" role="listitem">
+            <button class="objection__trigger" aria-expanded="false" onclick="toggleObjection(this)">
+              <span>"I don't have time."</span>
+              <svg class="objection__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="objection__answer">
+              <div class="objection__answer-inner">
+                In growing season, a small container setup needs 20-30 minutes twice a week. That's watering, checking plants, picking what's ready. In winter, almost nothing. The community meetups are once or twice a month for a couple of hours, and they're optional. This is not a second job.
+              </div>
+            </div>
+          </div>
+
+          <!-- Objection 4 -->
+          <div class="objection reveal reveal-delay-2" role="listitem">
+            <button class="objection__trigger" aria-expanded="false" onclick="toggleObjection(this)">
+              <span>"I'm renting -- my landlord won't allow it."</span>
+              <svg class="objection__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="objection__answer">
+              <div class="objection__answer-inner">
+                Container gardens are portable -- you take them when you move. Many landlords are neutral or positive about tenants who improve outdoor spaces. It's worth asking. If the answer is no, start with a windowsill herb garden and join a community rooftop nearby. You don't need permission to grow basil on your kitchen windowsill.
+              </div>
+            </div>
+          </div>
+
+          <!-- Objection 5 -->
+          <div class="objection reveal reveal-delay-2" role="listitem">
+            <button class="objection__trigger" aria-expanded="false" onclick="toggleObjection(this)">
+              <span>"It'll cost a fortune to set up."</span>
+              <svg class="objection__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="objection__answer">
+              <div class="objection__answer-inner">
+                &euro;30-50 gets you started with a few recycled containers, a bag of compost from any garden centre, and a packet of seeds. But honestly? &euro;10 gets you one pot, one bag of compost, and one herb plant. That's enough. Rooftop Republic provides seeds and starter supplies at community events. The most expensive part is if you want proper raised beds later, and you don't need them to start.
+              </div>
+            </div>
+          </div>
+
+          <!-- Objection 6 -->
+          <div class="objection reveal reveal-delay-3" role="listitem">
+            <button class="objection__trigger" aria-expanded="false" onclick="toggleObjection(this)">
+              <span>"What if I start and then lose interest?"</span>
+              <svg class="objection__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="objection__answer">
+              <div class="objection__answer-inner">
+                That happens to some people and that's absolutely fine. Containers can be passed to a neighbour or to Rooftop Republic for reuse. There's no contract, no obligation. Some people grow for a year and stop. Some come back after a break. Some stay for decades. All of it is fine. You're not signing a mortgage -- you're planting a herb.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===============================================================
+         SECTION 5: THE HERB POT CHALLENGE
+         =============================================================== -->
+    <section id="herb-pot-challenge" class="challenge" aria-label="The Herb Pot Challenge">
+      <div class="container">
+        <div class="challenge__card reveal">
+          <div class="challenge__label">
+            <span aria-hidden="true">&#127793;</span> The Herb Pot Challenge
+          </div>
+
+          <h2 class="challenge__headline">Plant one pot this weekend. That's it. That's the whole first step.</h2>
+
+          <ol class="challenge__steps">
+            <li class="challenge__step">
+              <span class="challenge__step-icon" aria-hidden="true">1</span>
+              <span>Grab a pot (a saucepan works), fill it with compost (&euro;4 from any garden centre)</span>
+            </li>
+            <li class="challenge__step">
+              <span class="challenge__step-icon" aria-hidden="true">2</span>
+              <span>Plant a supermarket herb (&euro;2 basil, parsley, or mint) or sprinkle in a packet of seeds</span>
+            </li>
+            <li class="challenge__step">
+              <span class="challenge__step-icon" aria-hidden="true">3</span>
+              <span>Put it on your windowsill, balcony, or doorstep. Water when the soil feels dry.</span>
+            </li>
+          </ol>
+
+          <div class="challenge__stats" role="group" aria-label="Challenge quick facts">
+            <div class="challenge__stat">
+              <span class="challenge__stat-value" aria-label="Total cost: under 10 euro">&euro;10</span>
+              <span class="challenge__stat-label">total cost</span>
+            </div>
+            <div class="challenge__stat">
+              <span class="challenge__stat-value" aria-label="Total time: 15 minutes">15 min</span>
+              <span class="challenge__stat-label">total time</span>
+            </div>
+            <div class="challenge__stat">
+              <span class="challenge__stat-value" aria-label="First harvest in 2 to 4 weeks">2-4 wks</span>
+              <span class="challenge__stat-label">first harvest</span>
+            </div>
+          </div>
+
+          <p class="challenge__nudge">It's spring. The growing window is open right now. Your first harvest could be ready by June.</p>
+
+          <div class="challenge__actions">
+            <button class="btn btn--primary btn--full" onclick="saveChallenge(this)" aria-label="Save the Herb Pot Challenge instructions">Save the Challenge</button>
+            <button class="challenge__share" onclick="shareChallenge()" aria-label="Share this challenge with a friend">Share with a friend</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===============================================================
+         SECTION 6: WHAT CAN I GROW? (RECOMMENDER QUIZ)
+         =============================================================== -->
+    <section id="quiz" class="section section--white" aria-label="What can I grow? Interactive quiz">
+      <div class="container">
+        <div class="quiz__intro reveal">
+          <h2 class="heading-section">What Can I Grow?</h2>
+          <p>Answer 3 questions. Get your personalised growing plan.</p>
+        </div>
+
+        <div class="quiz__container" role="form" aria-label="Growing recommendation quiz">
+
+          <!-- Step 1: Space -->
+          <div class="quiz__step active" data-step="1" id="quiz-step-1">
+            <span class="quiz__step-label">Step 1 of 3</span>
+            <h3 class="quiz__question">What space do you have?</h3>
+            <div class="quiz__options" role="group" aria-label="Space options">
+              <button class="quiz__option" data-value="windowsill" aria-pressed="false" onclick="selectQuizOption(this)">
+                <span class="quiz__option-icon" aria-hidden="true">&#127974;</span>
+                Windowsill
+              </button>
+              <button class="quiz__option" data-value="balcony" aria-pressed="false" onclick="selectQuizOption(this)">
+                <span class="quiz__option-icon" aria-hidden="true">&#127747;</span>
+                Balcony
+              </button>
+              <button class="quiz__option" data-value="rooftop" aria-pressed="false" onclick="selectQuizOption(this)">
+                <span class="quiz__option-icon" aria-hidden="true">&#127961;</span>
+                Rooftop
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 2: Experience -->
+          <div class="quiz__step" data-step="2" id="quiz-step-2">
+            <span class="quiz__step-label">Step 2 of 3</span>
+            <h3 class="quiz__question">Have you grown anything before?</h3>
+            <div class="quiz__options" role="group" aria-label="Experience options">
+              <button class="quiz__option" data-value="never" aria-pressed="false" onclick="selectQuizOption(this)">
+                <span class="quiz__option-icon" aria-hidden="true">&#129300;</span>
+                Never
+              </button>
+              <button class="quiz__option" data-value="a-little" aria-pressed="false" onclick="selectQuizOption(this)">
+                <span class="quiz__option-icon" aria-hidden="true">&#127793;</span>
+                A little
+              </button>
+              <button class="quiz__option" data-value="experienced" aria-pressed="false" onclick="selectQuizOption(this)">
+                <span class="quiz__option-icon" aria-hidden="true">&#129528;</span>
+                I know my way around
+              </button>
+            </div>
+          </div>
+
+          <!-- Step 3: Preference -->
+          <div class="quiz__step" data-step="3" id="quiz-step-3">
+            <span class="quiz__step-label">Step 3 of 3</span>
+            <h3 class="quiz__question">What sounds good?</h3>
+            <div class="quiz__options" role="group" aria-label="Preference options">
+              <button class="quiz__option" data-value="herbs" aria-pressed="false" onclick="selectQuizOption(this)">
+                <span class="quiz__option-icon" aria-hidden="true">&#127807;</span>
+                Fresh herbs
+              </button>
+              <button class="quiz__option" data-value="salad" aria-pressed="false" onclick="selectQuizOption(this)">
+                <span class="quiz__option-icon" aria-hidden="true">&#129367;</span>
+                Salad greens
+              </button>
+              <button class="quiz__option" data-value="veg" aria-pressed="false" onclick="selectQuizOption(this)">
+                <span class="quiz__option-icon" aria-hidden="true">&#129365;</span>
+                Vegetables
+              </button>
+              <button class="quiz__option" data-value="surprise" aria-pressed="false" onclick="selectQuizOption(this)">
+                <span class="quiz__option-icon" aria-hidden="true">&#127775;</span>
+                Surprise me
+              </button>
+            </div>
+          </div>
+
+          <!-- Result -->
+          <div class="quiz__result" id="quiz-result" aria-live="polite">
+            <div class="quiz__result-title">Your Growing Plan</div>
+            <div id="quiz-result-plants"></div>
+            <button class="quiz__reset" onclick="resetQuiz()">Try different answers</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===============================================================
+         SECTION 7: YOUR GROWING JOURNEY
+         =============================================================== -->
+    <section class="section section--mist" aria-label="Your growing journey progression">
+      <div class="container">
+        <h2 class="heading-section reveal">Your Growing Journey</h2>
+
+        <div class="journey__path">
+          <div class="journey__step reveal">
+            <div class="journey__node">1</div>
+            <div class="journey__content">
+              <div class="journey__badge">You are here</div>
+              <div class="journey__title">Plant a Pot</div>
+              <div class="journey__desc">This weekend. &euro;10. 15 minutes. Your first harvest in weeks.</div>
+            </div>
+          </div>
+
+          <div class="journey__step reveal reveal-delay-1">
+            <div class="journey__node">2</div>
+            <div class="journey__content">
+              <div class="journey__title">Share a Photo</div>
+              <div class="journey__desc">Show it off. Join the community. Inspire someone else.</div>
+            </div>
+          </div>
+
+          <div class="journey__step reveal reveal-delay-2">
+            <div class="journey__node">3</div>
+            <div class="journey__content">
+              <div class="journey__title">Drop In on a Saturday</div>
+              <div class="journey__desc">Meet your neighbours. Get your hands dirty. Free. No commitment.</div>
+            </div>
+          </div>
+
+          <div class="journey__step future reveal reveal-delay-3">
+            <div class="journey__node">4</div>
+            <div class="journey__content">
+              <div class="journey__title">Claim Your Patch</div>
+              <div class="journey__desc">Your own containers at a community rooftop near you.</div>
+            </div>
+          </div>
+
+          <div class="journey__step future reveal reveal-delay-3">
+            <div class="journey__node">5</div>
+            <div class="journey__content">
+              <div class="journey__title">Become a Regular</div>
+              <div class="journey__desc">Seasonal rhythms. Shared harvests. Saturday morning ritual.</div>
+            </div>
+          </div>
+
+          <div class="journey__step future reveal reveal-delay-4">
+            <div class="journey__node">6</div>
+            <div class="journey__content">
+              <div class="journey__title">Start a Rooftop</div>
+              <div class="journey__desc">Bring the mission to your building. Grow the next 160.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===============================================================
+         SECTION 8: DUBLIN MAP
+         =============================================================== -->
+    <section id="map" class="section section--white" aria-label="Find a rooftop near you">
+      <div class="container">
+        <h2 class="heading-section reveal">Find Your Nearest Rooftop</h2>
+        <p class="map__subtitle reveal">40 rooftops across Dublin. Is there one near you?</p>
+
+        <div class="map__wrapper">
+          <div class="map__grid reveal" role="list" aria-label="Dublin neighbourhood rooftop locations">
+
+            <button class="map__area active-area" role="listitem" onclick="showMapDetail(this, 'stoneybatter')" aria-label="Stoneybatter: 5 rooftop gardens. Tap for details.">
+              <div class="map__area-name">Stoneybatter</div>
+              <div class="map__area-count">5 rooftops</div>
+              <div class="map__area-growing">Herbs, lettuce, kale</div>
+            </button>
+
+            <button class="map__area active-area" role="listitem" onclick="showMapDetail(this, 'phibsborough')" aria-label="Phibsborough: 4 rooftop gardens. Tap for details.">
+              <div class="map__area-name">Phibsborough</div>
+              <div class="map__area-count">4 rooftops</div>
+              <div class="map__area-growing">Herbs, radishes, peas</div>
+            </button>
+
+            <button class="map__area active-area" role="listitem" onclick="showMapDetail(this, 'smithfield')" aria-label="Smithfield: 6 rooftop gardens. Tap for details.">
+              <div class="map__area-name">Smithfield</div>
+              <div class="map__area-count">6 rooftops</div>
+              <div class="map__area-growing">Tomatoes, dill, cucumbers</div>
+            </button>
+
+            <button class="map__area active-area" role="listitem" onclick="showMapDetail(this, 'rathmines')" aria-label="Rathmines: 3 rooftop gardens. Tap for details.">
+              <div class="map__area-name">Rathmines</div>
+              <div class="map__area-count">3 rooftops</div>
+              <div class="map__area-growing">Kale, chard, strawberries</div>
+            </button>
+
+            <button class="map__area active-area" role="listitem" onclick="showMapDetail(this, 'portobello')" aria-label="Portobello: 4 rooftop gardens. Tap for details.">
+              <div class="map__area-name">Portobello</div>
+              <div class="map__area-count">4 rooftops</div>
+              <div class="map__area-growing">Herbs, salad greens</div>
+            </button>
+
+            <button class="map__area active-area" role="listitem" onclick="showMapDetail(this, 'docklands')" aria-label="Docklands: 7 rooftop gardens. Tap for details.">
+              <div class="map__area-name">Docklands</div>
+              <div class="map__area-count">7 rooftops</div>
+              <div class="map__area-growing">Cherry tomatoes, beans</div>
+            </button>
+
+            <button class="map__area active-area" role="listitem" onclick="showMapDetail(this, 'liberties')" aria-label="The Liberties: 3 rooftop gardens. Tap for details.">
+              <div class="map__area-name">The Liberties</div>
+              <div class="map__area-count">3 rooftops</div>
+              <div class="map__area-growing">Rocket, spinach, mint</div>
+            </button>
+
+            <button class="map__area no-site" role="listitem" onclick="showMapDetail(this, 'drumcondra')" aria-label="Drumcondra: No rooftop yet. Tap for details.">
+              <div class="map__area-name">Drumcondra</div>
+              <div class="map__area-count">Coming soon</div>
+              <div class="map__area-growing">Be the first</div>
+            </button>
+
+          </div>
+
+          <div class="map__detail" id="map-detail" role="dialog" aria-label="Neighbourhood detail">
+            <div class="map__detail-title" id="map-detail-title"></div>
+            <div class="map__detail-info" id="map-detail-info"></div>
+          </div>
+
+          <p class="map__cta reveal">Don't see your neighbourhood? <a href="#herb-pot-challenge">Start with a pot at home</a> and you could be the one who brings a rooftop to your area.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===============================================================
+         SECTION 9: SEASONAL TIMELINE
+         =============================================================== -->
+    <section class="section section--mist" aria-label="Seasonal growing calendar">
+      <div class="container">
+        <h2 class="heading-section reveal">What's Growing Right Now</h2>
+
+        <div class="seasonal__strip" role="list" aria-label="Monthly growing guide" id="seasonal-strip">
+          <div class="seasonal__month" role="listitem" data-month="0">
+            <div class="seasonal__month-icon" aria-hidden="true">&#10052;</div>
+            <div class="seasonal__month-name">Jan</div>
+            <div class="seasonal__month-text">Rest season. Plan ahead. Seed catalogues and dreams.</div>
+          </div>
+          <div class="seasonal__month" role="listitem" data-month="1">
+            <div class="seasonal__month-icon" aria-hidden="true">&#10052;</div>
+            <div class="seasonal__month-name">Feb</div>
+            <div class="seasonal__month-text">Sow early seeds indoors. Chit potatoes. Seed swaps.</div>
+          </div>
+          <div class="seasonal__month" role="listitem" data-month="2">
+            <div class="seasonal__month-icon" aria-hidden="true">&#127793;</div>
+            <div class="seasonal__month-name">Mar</div>
+            <div class="seasonal__month-text">Spring start! Sow peas, radishes, spinach, rocket outdoors.</div>
+          </div>
+          <div class="seasonal__month" role="listitem" data-month="3">
+            <div class="seasonal__month-icon" aria-hidden="true">&#127793;</div>
+            <div class="seasonal__month-name">Apr</div>
+            <div class="seasonal__month-text">Sow herbs, kale, chard, spring onions. Lettuce galore.</div>
+          </div>
+          <div class="seasonal__month" role="listitem" data-month="4">
+            <div class="seasonal__month-icon" aria-hidden="true">&#127800;</div>
+            <div class="seasonal__month-name">May</div>
+            <div class="seasonal__month-text">Tomatoes go outside. Sow beans, beetroot, carrots.</div>
+          </div>
+          <div class="seasonal__month" role="listitem" data-month="5">
+            <div class="seasonal__month-icon" aria-hidden="true">&#9728;</div>
+            <div class="seasonal__month-name">Jun</div>
+            <div class="seasonal__month-text">Long days. Everything growing. First salad harvests.</div>
+          </div>
+          <div class="seasonal__month" role="listitem" data-month="6">
+            <div class="seasonal__month-icon" aria-hidden="true">&#127805;</div>
+            <div class="seasonal__month-name">Jul</div>
+            <div class="seasonal__month-text">Harvest: lettuce, herbs, peas, radishes, strawberries.</div>
+          </div>
+          <div class="seasonal__month" role="listitem" data-month="7">
+            <div class="seasonal__month-icon" aria-hidden="true">&#127805;</div>
+            <div class="seasonal__month-name">Aug</div>
+            <div class="seasonal__month-text">Peak season. Tomatoes ripen. Courgettes everywhere.</div>
+          </div>
+          <div class="seasonal__month" role="listitem" data-month="8">
+            <div class="seasonal__month-icon" aria-hidden="true">&#127810;</div>
+            <div class="seasonal__month-name">Sep</div>
+            <div class="seasonal__month-text">Sow winter crops. Harvest remaining summer veg.</div>
+          </div>
+          <div class="seasonal__month" role="listitem" data-month="9">
+            <div class="seasonal__month-icon" aria-hidden="true">&#127810;</div>
+            <div class="seasonal__month-name">Oct</div>
+            <div class="seasonal__month-text">Plant garlic. Green tomato chutney. Clear spent plants.</div>
+          </div>
+          <div class="seasonal__month" role="listitem" data-month="10">
+            <div class="seasonal__month-icon" aria-hidden="true">&#127787;</div>
+            <div class="seasonal__month-name">Nov</div>
+            <div class="seasonal__month-text">Quiet time. Kale and chard survive. Community meetups.</div>
+          </div>
+          <div class="seasonal__month" role="listitem" data-month="11">
+            <div class="seasonal__month-icon" aria-hidden="true">&#10052;</div>
+            <div class="seasonal__month-name">Dec</div>
+            <div class="seasonal__month-text">Garlic grows underground. Rest. Plan. Drink tea.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===============================================================
+         SECTION 10: COLLECTIVE GOAL TRACKER
+         =============================================================== -->
+    <section class="section section--white" aria-label="Community growing goal">
+      <div class="container">
+        <div class="goal__wrapper reveal">
+          <div class="goal__number" aria-hidden="true"><span data-target="420" class="counter">420</span> kg</div>
+          <div class="goal__label" role="progressbar" aria-valuenow="420" aria-valuemin="0" aria-valuemax="1000" aria-label="Dublin community growing goal: 420 out of 1000 kilograms of food grown">Dublin's rooftops have grown <strong>420 kg</strong> of food this year. Goal: <strong>1,000 kg</strong>.</div>
+          <div class="goal__bar">
+            <div class="goal__fill" style="--goal-percent: 42%"></div>
+          </div>
+          <p class="goal__text">Every pot counts. Every rooftop contributes. Every grower is part of the number.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===============================================================
+         SECTION 11: FINAL CTA
+         =============================================================== -->
+    <section class="final-cta" aria-label="Call to action">
+      <div class="container">
+        <h2 class="final-cta__headline reveal">40 Rooftops and Growing. Be Part of the Next 160.</h2>
+        <p class="final-cta__sub reveal">Start with one pot. See what happens.</p>
+        <div class="reveal reveal-delay-1">
+          <a href="#herb-pot-challenge" class="btn btn--primary">Start This Weekend</a>
+        </div>
+        <div class="final-cta__links reveal reveal-delay-2">
+          <a href="#map">Find a drop-in near you</a>
+          <a href="#" onclick="sharePage(event)">Share this page</a>
+        </div>
+        <p class="final-cta__closing reveal reveal-delay-3">See you on the rooftop.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===============================================================
+       SECTION 12: FOOTER
+       =============================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand">Rooftop Republic</div>
+          <p class="footer__tagline">Growing food, growing community, one Dublin rooftop at a time.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#" aria-label="Rooftop Republic on Instagram">Instagram</a>
+          <a href="#" aria-label="Rooftop Republic on Facebook">Facebook</a>
+          <a href="mailto:hello@rooftoprepublic.ie">Contact</a>
+        </div>
+      </div>
+
+      <p style="margin-bottom: var(--space-md); text-align: center;">
+        <a href="#" onclick="openAgentsOverlay(event)" style="color: rgba(255,255,255,0.6); font-size: var(--text-body-sm); border: 1px solid rgba(255,255,255,0.2); border-radius: var(--radius-sm); padding: 6px 16px; display: inline-block; transition: all 0.2s ease;" onmouseover="this.style.color='#fff'; this.style.borderColor='rgba(255,255,255,0.4)';" onmouseout="this.style.color='rgba(255,255,255,0.6)'; this.style.borderColor='rgba(255,255,255,0.2)';">Academic / Methodology -- How This Page Was Built</a>
+      </p>
+      <p class="footer__copy">&copy; 2026 Rooftop Republic. Built with care for Dublin's rooftops. Part of the 10,000 Hours of Play Challenge.</p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" aria-label="Back to top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script>
+    /* ================================================================
+       VANILLA JAVASCRIPT -- ALL INTERACTIVE BEHAVIOUR
+       ================================================================ */
+
+    (function() {
+      'use strict';
+
+      // Detect reduced motion preference
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ----- INTERSECTION OBSERVER: Scroll-triggered reveals ----- */
+      const revealObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      document.querySelectorAll('.reveal').forEach(function(el) {
+        if (prefersReducedMotion) {
+          el.classList.add('visible');
+        } else {
+          revealObserver.observe(el);
+        }
+      });
+
+      /* ----- HERO COUNTER ANIMATION ----- */
+      const counterElements = document.querySelectorAll('.hero__stat-number[data-target]');
+      let counterAnimated = false;
+
+      function easeOutCubic(t) {
+        return 1 - Math.pow(1 - t, 3);
+      }
+
+      function animateCounter(el, target, duration, delay) {
+        setTimeout(function() {
+          var start = performance.now();
+          var suffix = el.textContent.includes('+') ? '+' : '';
+          function update(now) {
+            var elapsed = now - start;
+            var progress = Math.min(elapsed / duration, 1);
+            var easedProgress = easeOutCubic(progress);
+            var currentValue = Math.round(easedProgress * target);
+            el.textContent = currentValue + suffix;
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            } else {
+              el.textContent = target + suffix;
+            }
+          }
+          requestAnimationFrame(update);
+        }, delay);
+      }
+
+      var heroCounterObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting && !counterAnimated) {
+            counterAnimated = true;
+            if (prefersReducedMotion) return; // Values already in HTML
+            counterElements.forEach(function(el, i) {
+              var target = parseInt(el.getAttribute('data-target'), 10);
+              animateCounter(el, target, 1500, i * 200);
+            });
+            heroCounterObserver.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+
+      if (counterElements.length > 0) {
+        heroCounterObserver.observe(counterElements[0].closest('.hero__counters'));
+      }
+
+      /* ----- GOAL PROGRESS BAR ANIMATION ----- */
+      var goalFill = document.querySelector('.goal__fill');
+      if (goalFill) {
+        var goalObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              goalFill.classList.add('animated');
+
+              // Animate the number
+              var goalNumber = document.querySelector('.goal__number .counter');
+              if (goalNumber && !prefersReducedMotion) {
+                var target = parseInt(goalNumber.getAttribute('data-target'), 10);
+                animateCounter(goalNumber, target, 1500, 0);
+              }
+
+              goalObserver.disconnect();
+            }
+          });
+        }, { threshold: 0.3 });
+        goalObserver.observe(goalFill.closest('.goal__wrapper'));
+      }
+
+      /* ----- NAVIGATION: Show/hide on scroll ----- */
+      var nav = document.querySelector('.nav');
+      var lastScrollY = 0;
+      var heroHeight = window.innerHeight;
+
+      window.addEventListener('scroll', function() {
+        var currentScrollY = window.pageYOffset;
+        if (currentScrollY > heroHeight * 0.8) {
+          nav.classList.add('visible');
+        } else {
+          nav.classList.remove('visible');
+        }
+        lastScrollY = currentScrollY;
+      }, { passive: true });
+
+      /* ----- BACK TO TOP BUTTON ----- */
+      var backToTop = document.querySelector('.back-to-top');
+      window.addEventListener('scroll', function() {
+        var scrollPercent = window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight);
+        if (scrollPercent > 0.3) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      }, { passive: true });
+
+      /* ----- SEASONAL TIMELINE: Scroll current month into view ----- */
+      var currentMonth = new Date().getMonth();
+      var monthCards = document.querySelectorAll('.seasonal__month');
+      monthCards.forEach(function(card) {
+        if (parseInt(card.getAttribute('data-month'), 10) === currentMonth) {
+          card.classList.add('current');
+          // Scroll into view when the section is visible
+          var timelineObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                card.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth', inline: 'center', block: 'nearest' });
+                timelineObserver.disconnect();
+              }
+            });
+          }, { threshold: 0.3 });
+          timelineObserver.observe(card.closest('.seasonal__strip'));
+        }
+      });
+
+      /* ----- STORY CAROUSEL DOTS (mobile) ----- */
+      var storyGrid = document.querySelector('.stories__grid');
+      var storyDots = document.querySelectorAll('.stories__dot');
+      if (storyGrid && storyDots.length > 0) {
+        var storyCards = storyGrid.querySelectorAll('.story-card');
+        var dotObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              var idx = Array.from(storyCards).indexOf(entry.target);
+              storyDots.forEach(function(dot, i) {
+                dot.classList.toggle('active', i === idx);
+                dot.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+              });
+            }
+          });
+        }, { root: storyGrid, threshold: 0.6 });
+
+        storyCards.forEach(function(card) {
+          dotObserver.observe(card);
+        });
+
+        storyDots.forEach(function(dot, i) {
+          dot.addEventListener('click', function() {
+            storyCards[i].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          });
+        });
+      }
+
+    })();
+
+    /* ----- STORY CARD: Read more toggle ----- */
+    function toggleStory(btn) {
+      var fullText = btn.previousElementSibling;
+      var isOpen = fullText.classList.contains('open');
+      fullText.classList.toggle('open');
+      btn.setAttribute('aria-expanded', !isOpen);
+      btn.innerHTML = isOpen ? 'Read more <span aria-hidden="true">+</span>' : 'Read less <span aria-hidden="true">-</span>';
+    }
+
+    /* ----- OBJECTION ACCORDION ----- */
+    function toggleObjection(btn) {
+      var objection = btn.closest('.objection');
+      var isOpen = objection.classList.contains('open');
+
+      // Close all others
+      document.querySelectorAll('.objection.open').forEach(function(item) {
+        if (item !== objection) {
+          item.classList.remove('open');
+          item.querySelector('.objection__trigger').setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      objection.classList.toggle('open');
+      btn.setAttribute('aria-expanded', !isOpen);
+    }
+
+    /* ----- HERB POT CHALLENGE: Save & Share ----- */
+    function saveChallenge(btn) {
+      // Copy challenge URL to clipboard
+      var url = window.location.href.split('#')[0] + '#herb-pot-challenge';
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(function() {
+          var original = btn.textContent;
+          btn.textContent = 'Saved! Link copied.';
+          btn.setAttribute('aria-label', 'Challenge link copied to clipboard');
+          setTimeout(function() {
+            btn.textContent = original;
+            btn.setAttribute('aria-label', 'Save the Herb Pot Challenge instructions');
+          }, 2000);
+        });
+      } else {
+        // Fallback: just scroll to the section
+        window.location.hash = 'herb-pot-challenge';
+      }
+    }
+
+    function shareChallenge() {
+      var url = window.location.href.split('#')[0] + '#herb-pot-challenge';
+      var text = 'The Herb Pot Challenge: Plant one pot this weekend. 15 minutes, under EUR 10. First harvest in 2-4 weeks.';
+      if (navigator.share) {
+        navigator.share({ title: 'Rooftop Republic - Herb Pot Challenge', text: text, url: url });
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(url);
+        alert('Link copied to clipboard!');
+      }
+    }
+
+    function sharePage(e) {
+      e.preventDefault();
+      if (navigator.share) {
+        navigator.share({ title: 'Rooftop Republic', text: 'Dublin\'s rooftops are waking up. 40 rooftops, 250+ growers, one city growing.', url: window.location.href });
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(window.location.href);
+        alert('Link copied to clipboard!');
+      }
+    }
+
+    /* ----- QUIZ: What Can I Grow? ----- */
+    var quizState = { space: null, experience: null, preference: null };
+    var quizStepOrder = ['space', 'experience', 'preference'];
+    var currentQuizStep = 1;
+
+    var plantDatabase = {
+      basil:    { icon: '🌿', name: 'Basil', tip: 'Pick leaves from the top to encourage bushy growth. Plant now, harvest by June.' },
+      mint:     { icon: '🍃', name: 'Mint', tip: 'Practically unkillable. Give it its own pot -- it spreads like gossip.' },
+      parsley:  { icon: '🌱', name: 'Parsley', tip: 'Slow to germinate (2-3 weeks). Be patient. Worth the wait in every pasta dish.' },
+      chives:   { icon: '🌾', name: 'Chives', tip: 'Perennial. Plant once, pick for years. Brilliant in scrambled eggs.' },
+      rocket:   { icon: '🥬', name: 'Rocket', tip: 'Sow seeds directly. Ready in just 4 weeks. Peppery and gorgeous.' },
+      lettuce:  { icon: '🥗', name: 'Lettuce', tip: 'Pick outer leaves, let the centre keep growing. Salad all summer.' },
+      spinach:  { icon: '🥬', name: 'Spinach', tip: 'Loves Dublin\'s cool, damp climate. Sow every 3 weeks for continuous harvest.' },
+      radish:   { icon: '🔴', name: 'Radishes', tip: 'The fastest reward in gardening. Ready in 4 weeks from sowing.' },
+      kale:     { icon: '🥦', name: 'Kale', tip: 'Tough as nails. Survives Dublin winters. Pick leaves from the bottom up.' },
+      chard:    { icon: '🌈', name: 'Rainbow Chard', tip: 'Beautiful and delicious. Colourful stems brighten any rooftop.' },
+      tomato:   { icon: '🍅', name: 'Cherry Tomatoes', tip: 'Need a sheltered spot. Tumbling varieties work great in hanging baskets.' },
+      peas:     { icon: '🫛', name: 'Peas', tip: 'Grow up a simple cane or trellis. Kids love picking them straight off the vine.' },
+      beans:    { icon: '🫘', name: 'French Beans', tip: 'Prolific croppers. Pick regularly and they keep producing.' },
+      courgette:{ icon: '🥒', name: 'Courgette', tip: 'One plant produces more than you can eat. Great for sharing with neighbours.' },
+      strawberry:{ icon: '🍓', name: 'Strawberries', tip: 'Perfect in containers and hanging baskets. Kids go absolutely mad for them.' },
+      springonion:{ icon: '🧅', name: 'Spring Onions', tip: 'Sow thickly, pull when needed. Ready in 8-10 weeks.' }
+    };
+
+    function getRecommendations(space, experience, preference) {
+      var recs = [];
+      if (preference === 'herbs' || preference === 'surprise') {
+        recs.push('basil', 'mint', 'parsley', 'chives');
+        if (space !== 'windowsill') recs.push('rocket');
+      }
+      if (preference === 'salad') {
+        recs.push('rocket', 'lettuce', 'spinach');
+        if (experience !== 'never') recs.push('radish');
+        recs.push('springonion');
+      }
+      if (preference === 'veg') {
+        if (space === 'windowsill') {
+          recs.push('basil', 'chives', 'spinach', 'springonion');
+        } else if (space === 'balcony') {
+          recs.push('tomato', 'kale', 'chard', 'peas');
+          if (experience !== 'never') recs.push('beans');
+        } else {
+          recs.push('tomato', 'courgette', 'kale', 'beans');
+          if (experience === 'experienced') recs.push('strawberry');
+          else recs.push('peas');
+        }
+      }
+      if (preference === 'surprise') {
+        if (space === 'windowsill') {
+          recs = ['basil', 'chives', 'spinach', 'lettuce'];
+        } else if (space === 'balcony') {
+          recs = ['strawberry', 'tomato', 'rocket', 'mint', 'radish'];
+        } else {
+          recs = ['courgette', 'kale', 'strawberry', 'beans', 'chard'];
+        }
+      }
+      // Limit to 4-5 unique items
+      var unique = [];
+      recs.forEach(function(r) { if (unique.indexOf(r) === -1) unique.push(r); });
+      return unique.slice(0, 5);
+    }
+
+    function selectQuizOption(btn) {
+      var step = parseInt(btn.closest('.quiz__step').getAttribute('data-step'), 10);
+      var value = btn.getAttribute('data-value');
+      var key = quizStepOrder[step - 1];
+      quizState[key] = value;
+
+      // Visual feedback
+      var siblings = btn.parentElement.querySelectorAll('.quiz__option');
+      siblings.forEach(function(sib) {
+        sib.classList.remove('selected');
+        sib.classList.add('dimmed');
+        sib.setAttribute('aria-pressed', 'false');
+      });
+      btn.classList.add('selected');
+      btn.classList.remove('dimmed');
+      btn.setAttribute('aria-pressed', 'true');
+
+      // Move to next step after brief delay
+      setTimeout(function() {
+        var currentStepEl = document.getElementById('quiz-step-' + step);
+        currentStepEl.classList.remove('active');
+
+        if (step < 3) {
+          var nextStepEl = document.getElementById('quiz-step-' + (step + 1));
+          nextStepEl.classList.add('active');
+          currentQuizStep = step + 1;
+        } else {
+          // Show results
+          showQuizResults();
+        }
+      }, 300);
+    }
+
+    function showQuizResults() {
+      var plants = getRecommendations(quizState.space, quizState.experience, quizState.preference);
+      var container = document.getElementById('quiz-result-plants');
+      container.innerHTML = '';
+
+      plants.forEach(function(key) {
+        var plant = plantDatabase[key];
+        if (!plant) return;
+        var div = document.createElement('div');
+        div.className = 'quiz__plant';
+        div.innerHTML = '<span class="quiz__plant-icon" aria-hidden="true">' + plant.icon + '</span>' +
+          '<div><span class="quiz__plant-name">' + plant.name + '</span>' +
+          '<div class="quiz__plant-tip">' + plant.tip + '</div></div>';
+        container.appendChild(div);
+      });
+
+      var resultEl = document.getElementById('quiz-result');
+      resultEl.classList.add('active');
+    }
+
+    function resetQuiz() {
+      quizState = { space: null, experience: null, preference: null };
+      currentQuizStep = 1;
+
+      // Hide result
+      document.getElementById('quiz-result').classList.remove('active');
+
+      // Reset all steps
+      document.querySelectorAll('.quiz__step').forEach(function(step) {
+        step.classList.remove('active');
+        step.querySelectorAll('.quiz__option').forEach(function(opt) {
+          opt.classList.remove('selected', 'dimmed');
+          opt.setAttribute('aria-pressed', 'false');
+        });
+      });
+
+      // Show step 1
+      document.getElementById('quiz-step-1').classList.add('active');
+    }
+
+    /* ----- MAP: Neighbourhood detail cards ----- */
+    var mapData = {
+      stoneybatter: {
+        title: 'Stoneybatter',
+        info: '<strong>5 rooftop gardens</strong> with 38 active growers.<br>Currently growing: herbs, lettuce, kale, radishes, strawberries.<br>Next drop-in: <strong>Saturday 5 April, 10am</strong> at the Manor Street rooftop.<br><em>Margaret\'s raised bed is here. Tea is always on.</em>'
+      },
+      phibsborough: {
+        title: 'Phibsborough',
+        info: '<strong>4 rooftop gardens</strong> with 29 active growers.<br>Currently growing: herbs, radishes, peas, spring onions.<br>Next drop-in: <strong>Saturday 12 April, 10am</strong> at the Phibsborough Road site.<br><em>This is where Niamh started with her EUR 1.99 basil plant.</em>'
+      },
+      smithfield: {
+        title: 'Smithfield',
+        info: '<strong>6 rooftop gardens</strong> with 45 active growers.<br>Currently growing: tomatoes, dill, cucumbers, herbs, courgettes.<br>Next drop-in: <strong>Saturday 5 April, 11am</strong> at the Smithfield Square rooftop.<br><em>Home of Tomasz, the Pickle King.</em>'
+      },
+      rathmines: {
+        title: 'Rathmines',
+        info: '<strong>3 rooftop gardens</strong> with 22 active growers.<br>Currently growing: kale, chard, strawberries, lettuce.<br>Next drop-in: <strong>Saturday 12 April, 10am</strong>.<br><em>Where Roisin discovered that kale is "not disgusting."</em>'
+      },
+      portobello: {
+        title: 'Portobello',
+        info: '<strong>4 rooftop gardens</strong> with 31 active growers.<br>Currently growing: herbs, salad greens, spring onions.<br>Next drop-in: <strong>Saturday 5 April, 10:30am</strong>.'
+      },
+      docklands: {
+        title: 'Docklands',
+        info: '<strong>7 rooftop gardens</strong> with 52 active growers.<br>Currently growing: cherry tomatoes, beans, herbs, rocket.<br>Next drop-in: <strong>Saturday 12 April, 11am</strong>.<br><em>The building manager who said no three times is now a grower.</em>'
+      },
+      liberties: {
+        title: 'The Liberties',
+        info: '<strong>3 rooftop gardens</strong> with 19 active growers.<br>Currently growing: rocket, spinach, mint, radishes.<br>Next drop-in: <strong>Saturday 5 April, 10am</strong>.'
+      },
+      drumcondra: {
+        title: 'Drumcondra',
+        info: 'No rooftop here yet -- but you could be the first.<br>If you live in Drumcondra and have access to a rooftop or know someone who does, <strong>get in touch</strong>. Every rooftop in Dublin started with one person asking "what if?"'
+      }
+    };
+
+    var activeMapArea = null;
+    function showMapDetail(btn, area) {
+      var detail = document.getElementById('map-detail');
+      var data = mapData[area];
+      if (!data) return;
+
+      // Toggle if same area clicked
+      if (activeMapArea === area && detail.classList.contains('visible')) {
+        detail.classList.remove('visible');
+        activeMapArea = null;
+        return;
+      }
+
+      document.getElementById('map-detail-title').textContent = data.title;
+      document.getElementById('map-detail-info').innerHTML = data.info;
+      detail.classList.add('visible');
+      activeMapArea = area;
+    }
+
+    /* ----- AGENTS PANEL TOGGLE ----- */
+    function openAgentsOverlay(e) {
+      if (e) e.preventDefault();
+      var overlay = document.getElementById('agents-overlay');
+      overlay.classList.add('open');
+      overlay.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
+      // Focus the close button for accessibility
+      var closeBtn = overlay.querySelector('.agents-overlay__close');
+      if (closeBtn) closeBtn.focus();
+      // Close on Escape key
+      document.addEventListener('keydown', agentsOverlayEscHandler);
+    }
+
+    function closeAgentsOverlay() {
+      var overlay = document.getElementById('agents-overlay');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', agentsOverlayEscHandler);
+    }
+
+    function agentsOverlayEscHandler(e) {
+      if (e.key === 'Escape') closeAgentsOverlay();
+    }
+  </script>
+</body>
+</html>

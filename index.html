@@ -1682,6 +1682,90 @@
       font-size: var(--text-body-sm);
       max-width: var(--max-text);
     }
+
+    /* Core Drives Mapping Section */
+    .core-drives-section {
+      margin-top: var(--space-3xl);
+      padding-top: var(--space-2xl);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .core-drives-section__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-subsection);
+      color: var(--color-white);
+      margin-bottom: var(--space-sm);
+    }
+    .core-drives-section__subtitle {
+      color: rgba(255,255,255,0.6);
+      font-size: var(--text-body-sm);
+      margin-bottom: var(--space-2xl);
+      max-width: var(--max-text);
+    }
+    .core-drive-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-md);
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: var(--space-md);
+      align-items: start;
+    }
+    @media (max-width: 639px) {
+      .core-drive-item {
+        grid-template-columns: 1fr;
+      }
+    }
+    .core-drive-item__badge {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      color: var(--color-white);
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .core-drive-item__badge--white { background: var(--color-primary-green); }
+    .core-drive-item__badge--middle { background: var(--color-info-blue); }
+    .core-drive-item__badge--black { background: var(--color-warm-accent); }
+    .core-drive-item__name {
+      font-family: var(--font-heading);
+      font-size: var(--text-card-title);
+      color: var(--color-white);
+      margin-bottom: 4px;
+    }
+    .core-drive-item__hat {
+      font-size: var(--text-label);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+      margin-bottom: var(--space-sm);
+    }
+    .core-drive-item__hat--white { color: var(--color-primary-green); }
+    .core-drive-item__hat--middle { color: var(--color-info-blue); }
+    .core-drive-item__hat--black { color: var(--color-warm-accent); }
+    .core-drive-item__desc {
+      color: rgba(255,255,255,0.7);
+      font-size: var(--text-body-sm);
+      line-height: 1.6;
+      margin-bottom: var(--space-sm);
+    }
+    .core-drive-item__where {
+      font-size: var(--text-body-sm);
+      color: rgba(255,255,255,0.9);
+      padding-left: var(--space-md);
+      border-left: 2px solid rgba(255,255,255,0.15);
+      margin-top: var(--space-sm);
+      line-height: 1.6;
+    }
+    .core-drive-item__where strong {
+      color: var(--color-white);
+    }
   </style>
 </head>
 <body>
@@ -1834,6 +1918,146 @@
       <p class="agents-overlay__footer-note">
         Each agent was defined with a detailed persona, knowledge base, and design principles. They collaborated sequentially: the Urban Farming Expert diagnosed the problem, the Gamification Expert designed the motivational strategy, the Designer created the full specification, the Communicator shaped the voice, and the Developer built the final product. All agent definitions and reports are available in the project repository.
       </p>
+
+      <!-- ===== 8 CORE DRIVES MAPPING ===== -->
+      <div class="core-drives-section">
+        <div class="core-drives-section__title">How This Solution Meets the 8 Core Drives</div>
+        <p class="core-drives-section__subtitle">
+          Yu-kai Chou's Octalysis Framework identifies 8 Core Drives behind all human motivation. This landing page was designed to activate each drive intentionally. Below is how each core drive is embedded into the page, with specific examples of where visitors experience it.
+        </p>
+
+        <!-- CD1 -->
+        <div class="core-drive-item">
+          <div class="core-drive-item__badge core-drive-item__badge--white">CD1</div>
+          <div>
+            <div class="core-drive-item__name">Epic Meaning &amp; Calling</div>
+            <div class="core-drive-item__hat core-drive-item__hat--white">White Hat &bull; High Priority</div>
+            <div class="core-drive-item__desc">
+              Visitors feel they are joining something greater than themselves. Rooftop Republic is not a gardening service &mdash; it is a movement to transform Dublin's unused rooftops into a citywide food network.
+            </div>
+            <div class="core-drive-item__where">
+              <strong>Where on the page:</strong> The hero headline ("Dublin Has Thousands of Empty Rooftops. We're Turning Them Into Gardens") frames a city-scale mission. The collective goal tracker ("420 kg of 1,000 kg grown this year") ties individual action to communal impact. The final CTA ("Be Part of the Next 160") positions the visitor as joining a movement, not completing a form.
+            </div>
+          </div>
+        </div>
+
+        <!-- CD2 -->
+        <div class="core-drive-item">
+          <div class="core-drive-item__badge core-drive-item__badge--white">CD2</div>
+          <div>
+            <div class="core-drive-item__name">Development &amp; Accomplishment</div>
+            <div class="core-drive-item__hat core-drive-item__hat--white">White Hat &bull; High Priority</div>
+            <div class="core-drive-item__desc">
+              Visitors see a clear progression path from absolute beginner to experienced grower, with meaningful milestones at each stage. Progress feels earned, not given.
+            </div>
+            <div class="core-drive-item__where">
+              <strong>Where on the page:</strong> The Growing Journey section visualises 6 stages from "Plant a Herb Pot" to "Lead a Rooftop." The Herb Pot Challenge provides a concrete first achievement (grow herbs this weekend for under &euro;10 in 15 minutes). The animated counter stats (40 rooftops, 250+ growers) show community-level accomplishment. The "You are here" badge on Step 1 sets the visitor at the start of their journey.
+            </div>
+          </div>
+        </div>
+
+        <!-- CD3 -->
+        <div class="core-drive-item">
+          <div class="core-drive-item__badge core-drive-item__badge--white">CD3</div>
+          <div>
+            <div class="core-drive-item__name">Empowerment of Creativity &amp; Feedback</div>
+            <div class="core-drive-item__hat core-drive-item__hat--white">White Hat &bull; High Priority (Golden Corner)</div>
+            <div class="core-drive-item__desc">
+              The "Golden Corner" of Octalysis &mdash; White Hat and intrinsically motivated. Visitors engage in creative exploration with immediate feedback, making the experience inherently rewarding.
+            </div>
+            <div class="core-drive-item__where">
+              <strong>Where on the page:</strong> The "What Can I Grow?" interactive quiz lets visitors input their space, experience, and preferences and instantly receive personalised plant recommendations. This is an evergreen mechanic &mdash; visitors create their own outcome. The seasonal timeline shows what's possible right now, empowering informed choices. The Herb Pot Challenge lets visitors pick their own herb and approach.
+            </div>
+          </div>
+        </div>
+
+        <!-- CD4 -->
+        <div class="core-drive-item">
+          <div class="core-drive-item__badge core-drive-item__badge--middle">CD4</div>
+          <div>
+            <div class="core-drive-item__name">Ownership &amp; Possession</div>
+            <div class="core-drive-item__hat core-drive-item__hat--middle">Middle Drive &bull; Medium Priority</div>
+            <div class="core-drive-item__desc">
+              Visitors begin to feel ownership before they've even signed up. The language and framing makes the rooftop feel like "theirs" &mdash; activating the endowment effect.
+            </div>
+            <div class="core-drive-item__where">
+              <strong>Where on the page:</strong> The headline "What's Your Rooftop Doing Right Now?" triggers psychological ownership over a space the visitor already has. The quiz results feel personalised ("Your rooftop garden could grow..."). The Dublin neighbourhood map lets visitors find "their" local community. The CTA "Claim Your Rooftop" uses ownership language. The Save/Share buttons on the Herb Pot Challenge create a sense of bookmarking something that's "mine."
+            </div>
+          </div>
+        </div>
+
+        <!-- CD5 -->
+        <div class="core-drive-item">
+          <div class="core-drive-item__badge core-drive-item__badge--middle">CD5</div>
+          <div>
+            <div class="core-drive-item__name">Social Influence &amp; Relatedness</div>
+            <div class="core-drive-item__hat core-drive-item__hat--middle">Middle Drive &bull; High Priority</div>
+            <div class="core-drive-item__desc">
+              People join because they see people like themselves already doing it. The community IS the product. Social proof, relatedness, and belonging are woven throughout.
+            </div>
+            <div class="core-drive-item__where">
+              <strong>Where on the page:</strong> The micro-stories section (Niamh in Phibsborough, Tomasz in Smithfield, Margaret in Stoneybatter, Roisin in Rathmines) shows diverse, relatable Dubliners who started as beginners. The animated counters (250+ growers) provide social proof through numbers. The Dublin map shows real neighbourhoods with active communities. The identity shift statement ("You don't need to know anything about gardening") uses social normalisation to dismantle the "not for me" barrier. Cooperative framing ("Together we're growing Dublin's food") over competitive language throughout.
+            </div>
+          </div>
+        </div>
+
+        <!-- CD6 -->
+        <div class="core-drive-item">
+          <div class="core-drive-item__badge core-drive-item__badge--black">CD6</div>
+          <div>
+            <div class="core-drive-item__name">Scarcity &amp; Impatience</div>
+            <div class="core-drive-item__hat core-drive-item__hat--black">Black Hat &bull; Low Priority (Used Sparingly)</div>
+            <div class="core-drive-item__desc">
+              Used lightly and honestly &mdash; only where real scarcity exists. No artificial urgency or false countdown timers.
+            </div>
+            <div class="core-drive-item__where">
+              <strong>Where on the page:</strong> The seasonal timeline creates real, natural scarcity ("Plant peas now &mdash; the window is March to May"). The gap between 40 current rooftops and 200 needed implies limited early-adopter positions. The "next drop-in" dates on neighbourhood cards create genuine appointment dynamics. These are all real constraints, not manufactured urgency &mdash; consistent with the 80/20 White Hat / Black Hat balance.
+            </div>
+          </div>
+        </div>
+
+        <!-- CD7 -->
+        <div class="core-drive-item">
+          <div class="core-drive-item__badge core-drive-item__badge--black">CD7</div>
+          <div>
+            <div class="core-drive-item__name">Unpredictability &amp; Curiosity</div>
+            <div class="core-drive-item__hat core-drive-item__hat--black">Black Hat &bull; Medium Priority</div>
+            <div class="core-drive-item__desc">
+              The page creates genuine curiosity that pulls visitors forward through the scroll. Each section reveals something new, making the next section feel like a page turn.
+            </div>
+            <div class="core-drive-item__where">
+              <strong>Where on the page:</strong> The "What Can I Grow?" quiz creates curiosity about personalised results &mdash; visitors want to see what the quiz recommends for their specific situation. The scroll-triggered animations reveal content progressively, creating a sense of discovery. The "Yeah, but..." accordion section uses information gaps (curiosity about the answer) to drive clicks. The micro-stories are structured as mini-narratives with surprising outcomes ("The Kid Who Ate the Kale"). The seasonal timeline invites exploration of different months.
+            </div>
+          </div>
+        </div>
+
+        <!-- CD8 -->
+        <div class="core-drive-item">
+          <div class="core-drive-item__badge core-drive-item__badge--black">CD8</div>
+          <div>
+            <div class="core-drive-item__name">Loss &amp; Avoidance</div>
+            <div class="core-drive-item__hat core-drive-item__hat--black">Black Hat &bull; Low Priority (Minimal Use)</div>
+            <div class="core-drive-item__desc">
+              The lightest-touch core drive on this page. Urban farming should feel empowering, not fear-inducing. Used only through gentle reframing, never guilt or pressure.
+            </div>
+            <div class="core-drive-item__where">
+              <strong>Where on the page:</strong> The implicit message "Your rooftop is sitting empty right now" creates a gentle sense of missed opportunity without guilt-tripping. The seasonal windows ("Plant now or wait until next spring") introduce natural, honest loss framing. The collective goal progress bar implies the community is moving forward &mdash; standing still means being left behind. Critically, this drive is never the primary motivator for any section. It supports urgency at the two conversion points (Herb Pot Challenge and Final CTA) and is immediately followed by White Hat reinforcement.
+            </div>
+          </div>
+        </div>
+
+        <!-- Balance summary -->
+        <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-md); padding: var(--space-lg); margin-top: var(--space-xl);">
+          <div style="font-family: var(--font-heading); font-size: var(--text-card-title); color: var(--color-white); margin-bottom: var(--space-sm);">The Balance: 80% White Hat / 20% Black Hat</div>
+          <p style="color: rgba(255,255,255,0.7); font-size: var(--text-body-sm); line-height: 1.7; margin-bottom: var(--space-md);">
+            This landing page is deliberately designed to be overwhelmingly White Hat. Visitors should feel <strong style="color: var(--color-white);">empowered, inspired, and capable</strong> &mdash; not anxious, pressured, or guilty. The Black Hat drives (CD6, CD7, CD8) are deployed sparingly and only at natural conversion moments, always followed immediately by White Hat reinforcement.
+          </p>
+          <p style="color: rgba(255,255,255,0.7); font-size: var(--text-body-sm); line-height: 1.7; margin-bottom: 0;">
+            The primary motivational engines are <strong style="color: var(--color-primary-green);">CD1 (Epic Meaning)</strong>, <strong style="color: var(--color-primary-green);">CD3 (Creativity &amp; Feedback &mdash; the Golden Corner)</strong>, and <strong style="color: var(--color-info-blue);">CD5 (Social Influence)</strong>. These three drives ensure that engagement is intrinsically motivated, community-driven, and sustainable &mdash; exactly what a community urban farming project needs to grow from 40 rooftops to 200.
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
 

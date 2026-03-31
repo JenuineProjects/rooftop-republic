@@ -1683,6 +1683,122 @@
       max-width: var(--max-text);
     }
 
+    /* Problem-Solution Section */
+    .problem-solution {
+      margin-top: var(--space-3xl);
+      padding-top: var(--space-2xl);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .problem-solution__title {
+      font-family: var(--font-heading);
+      font-size: var(--text-subsection);
+      color: var(--color-white);
+      margin-bottom: var(--space-sm);
+    }
+    .problem-solution__subtitle {
+      color: rgba(255,255,255,0.6);
+      font-size: var(--text-body-sm);
+      margin-bottom: var(--space-2xl);
+      max-width: var(--max-text);
+    }
+    .problem-box {
+      background: rgba(196, 93, 62, 0.12);
+      border: 1px solid rgba(196, 93, 62, 0.25);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-2xl);
+    }
+    .problem-box__label {
+      font-size: var(--text-label);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 600;
+      color: var(--color-warm-accent);
+      margin-bottom: var(--space-sm);
+    }
+    .problem-box__text {
+      font-family: var(--font-heading);
+      font-size: var(--text-body-lg);
+      color: var(--color-white);
+      line-height: 1.5;
+      font-style: italic;
+    }
+    .barrier-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+    @media (max-width: 639px) {
+      .barrier-row { grid-template-columns: 1fr; }
+    }
+    .barrier-card {
+      background: rgba(196, 93, 62, 0.08);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+    }
+    .barrier-card__label {
+      font-size: var(--text-label);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+      color: var(--color-warm-accent);
+      margin-bottom: var(--space-xs);
+    }
+    .barrier-card__assumption {
+      font-family: var(--font-heading);
+      font-size: var(--text-card-title);
+      color: var(--color-white);
+      margin-bottom: var(--space-sm);
+    }
+    .barrier-card__reality {
+      color: rgba(255,255,255,0.6);
+      font-size: var(--text-body-sm);
+      line-height: 1.6;
+    }
+    .solution-item {
+      background: rgba(58, 125, 68, 0.08);
+      border: 1px solid rgba(58, 125, 68, 0.15);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      margin-bottom: var(--space-md);
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: var(--space-md);
+      align-items: start;
+    }
+    @media (max-width: 639px) {
+      .solution-item { grid-template-columns: 1fr; }
+    }
+    .solution-item__icon {
+      width: 40px;
+      height: 40px;
+      background: var(--color-primary-green);
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-white);
+      flex-shrink: 0;
+    }
+    .solution-item__title {
+      font-weight: 600;
+      color: var(--color-white);
+      margin-bottom: 4px;
+    }
+    .solution-item__desc {
+      color: rgba(255,255,255,0.7);
+      font-size: var(--text-body-sm);
+      line-height: 1.6;
+    }
+    .solution-item__page-ref {
+      margin-top: var(--space-sm);
+      font-size: var(--text-body-sm);
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
+    }
+
     /* Core Drives Mapping Section */
     .core-drives-section {
       margin-top: var(--space-3xl);
@@ -1918,6 +2034,123 @@
       <p class="agents-overlay__footer-note">
         Each agent was defined with a detailed persona, knowledge base, and design principles. They collaborated sequentially: the Urban Farming Expert diagnosed the problem, the Gamification Expert designed the motivational strategy, the Designer created the full specification, the Communicator shaped the voice, and the Developer built the final product. All agent definitions and reports are available in the project repository.
       </p>
+
+      <!-- ===== PROBLEM-SOLUTION MAPPING ===== -->
+      <div class="problem-solution">
+        <div class="problem-solution__title">How This Solution Addresses the Problem</div>
+        <p class="problem-solution__subtitle">
+          The brief identifies a specific perception problem. Here is how our Urban Farming Expert diagnosed the barriers and how the landing page systematically dismantles each one.
+        </p>
+
+        <!-- The Problem -->
+        <div class="problem-box">
+          <div class="problem-box__label">The Problem</div>
+          <div class="problem-box__text">
+            "People think urban farming sounds nice but assume it requires expertise, time, and equipment they don't have."
+          </div>
+        </div>
+
+        <!-- Three Core Barriers -->
+        <div style="font-family: var(--font-heading); font-size: var(--text-card-title); color: var(--color-white); margin-bottom: var(--space-md);">The Three Assumed Barriers</div>
+
+        <div class="barrier-row">
+          <div class="barrier-card">
+            <div class="barrier-card__label">Barrier 1</div>
+            <div class="barrier-card__assumption">"I need expertise"</div>
+            <div class="barrier-card__reality">People picture someone with a horticulture degree and years of experience. They think there's a large body of knowledge they need before they can even start. They don't realise that 90% of community garden members started knowing absolutely nothing.</div>
+          </div>
+          <div class="barrier-card">
+            <div class="barrier-card__label">Barrier 2</div>
+            <div class="barrier-card__assumption">"I don't have time"</div>
+            <div class="barrier-card__reality">People overestimate how much time a rooftop garden demands and underestimate how little is actually needed. A small container setup needs just 20-30 minutes twice a week in growing season. That's less time than scrolling social media.</div>
+          </div>
+        </div>
+        <div class="barrier-row">
+          <div class="barrier-card">
+            <div class="barrier-card__label">Barrier 3</div>
+            <div class="barrier-card__assumption">"I need equipment"</div>
+            <div class="barrier-card__reality">People imagine expensive raised beds, specialist tools, and professional setups. In reality, you can start with a recycled container, a &euro;4 bag of compost, and a &euro;2 packet of seeds. Total cost to start: under &euro;10.</div>
+          </div>
+          <div class="barrier-card">
+            <div class="barrier-card__label">The Deeper Barrier</div>
+            <div class="barrier-card__assumption">"This isn't for people like me"</div>
+            <div class="barrier-card__reality">Before anyone even considers expertise, time, or equipment, they've already decided whether this is "for people like me." This identity barrier is the single biggest obstacle. The founder captured it perfectly: they need to think "I could do that" instead of "that's not for me."</div>
+          </div>
+        </div>
+
+        <!-- How the Solution Addresses Each Barrier -->
+        <div style="font-family: var(--font-heading); font-size: var(--text-card-title); color: var(--color-white); margin-top: var(--space-2xl); margin-bottom: var(--space-md);">How the Landing Page Dismantles Each Barrier</div>
+
+        <!-- Identity Barrier -->
+        <div class="solution-item">
+          <div class="solution-item__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <div class="solution-item__title">Breaking the Identity Barrier: "This IS for people like me"</div>
+            <div class="solution-item__desc">
+              The landing page shows <strong style="color:var(--color-white)">diverse, relatable Dubliners</strong> who started as complete beginners. The micro-stories feature a tech worker in Phibsborough, a Polish construction worker in Smithfield, a retired widow in Stoneybatter, and a young family in Rathmines. The bold identity shift statement ("You don't need to know anything about gardening. You don't need a big rooftop. You don't even need a rooftop.") directly confronts the "not for me" feeling. Every image, name, and neighbourhood is Dublin-specific so visitors see themselves on the page.
+            </div>
+            <div class="solution-item__page-ref">Page sections: Identity Shift, Micro-Stories, Dublin Map &bull; Core Drives: CD1 (Epic Meaning), CD5 (Social Influence)</div>
+          </div>
+        </div>
+
+        <!-- Expertise Barrier -->
+        <div class="solution-item">
+          <div class="solution-item__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+          </div>
+          <div>
+            <div class="solution-item__title">Dismantling "I Need Expertise"</div>
+            <div class="solution-item__desc">
+              Instead of a guide or manual, the page offers a <strong style="color:var(--color-white)">single, impossibly simple first step</strong>: the Herb Pot Challenge. Plant one pot of herbs this weekend. 15 minutes. Under &euro;10. No knowledge required &mdash; just fill a pot with compost, plant herbs, put it outside, water when dry. The interactive "What Can I Grow?" quiz gives personalised recommendations so visitors don't need to research anything. The "Yeah, but..." accordion addresses the expertise objection head-on: "Outdoor plants have rain, natural light, and soil biology on their side. Outdoor growing is more forgiving than you think."
+            </div>
+            <div class="solution-item__page-ref">Page sections: Herb Pot Challenge, Quiz, "Yeah but..." Accordion &bull; Core Drives: CD2 (Accomplishment), CD3 (Creativity &amp; Feedback)</div>
+          </div>
+        </div>
+
+        <!-- Time Barrier -->
+        <div class="solution-item">
+          <div class="solution-item__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          </div>
+          <div>
+            <div class="solution-item__title">Dismantling "I Don't Have Time"</div>
+            <div class="solution-item__desc">
+              The Herb Pot Challenge anchors the time commitment at <strong style="color:var(--color-white)">15 minutes this Saturday</strong> &mdash; not "hours per week" or "ongoing commitment." The page explicitly states that a container garden needs just 20 minutes twice a week. The Growing Journey progression shows that you start tiny and scale only when you want to. Community meetups are presented as monthly and optional. The seasonal timeline normalises winter as a quiet period ("You haven't failed because nothing is growing in January"), preventing the guilt of seasonal disengagement.
+            </div>
+            <div class="solution-item__page-ref">Page sections: Herb Pot Challenge, Growing Journey, Seasonal Timeline &bull; Core Drives: CD2 (Accomplishment), CD6 (Scarcity &mdash; seasonal windows)</div>
+          </div>
+        </div>
+
+        <!-- Equipment Barrier -->
+        <div class="solution-item">
+          <div class="solution-item__icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+          </div>
+          <div>
+            <div class="solution-item__title">Dismantling "I Need Equipment"</div>
+            <div class="solution-item__desc">
+              The Herb Pot Challenge specifies exactly what you need: <strong style="color:var(--color-white)">one pot (even an old saucepan), a &euro;4 bag of compost, and a &euro;2 herb plant or seed packet</strong>. Total: under &euro;10. The page avoids any imagery of professional gardening equipment, raised bed systems, or specialist tools. The micro-stories reinforce this: Niamh started with a &euro;1.99 Tesco basil plant. The "Yeah, but..." section addresses cost directly with honest numbers, not vague reassurances. The quiz results recommend plants that work in simple containers.
+            </div>
+            <div class="solution-item__page-ref">Page sections: Herb Pot Challenge, "Yeah but..." Accordion, Quiz Results &bull; Core Drives: CD3 (Creativity &amp; Feedback), CD4 (Ownership)</div>
+          </div>
+        </div>
+
+        <!-- The Strategy Summary -->
+        <div style="background: rgba(58, 125, 68, 0.1); border: 1px solid rgba(58, 125, 68, 0.2); border-radius: var(--radius-md); padding: var(--space-lg); margin-top: var(--space-xl);">
+          <div style="font-family: var(--font-heading); font-size: var(--text-card-title); color: var(--color-white); margin-bottom: var(--space-sm);">The Core Strategy: Make the First Step Inevitable</div>
+          <p style="color: rgba(255,255,255,0.7); font-size: var(--text-body-sm); line-height: 1.7; margin-bottom: var(--space-md);">
+            The landing page does not try to convince visitors that urban farming is important, or that they should commit to a rooftop garden. It does one thing: <strong style="color: var(--color-white);">make the very first, very small step feel so achievable that not doing it feels like the bigger effort.</strong>
+          </p>
+          <p style="color: rgba(255,255,255,0.7); font-size: var(--text-body-sm); line-height: 1.7; margin-bottom: var(--space-md);">
+            This follows the Urban Farming Expert's "First Step Strategy" &mdash; a staircase from a &euro;2 supermarket basil plant to running a full rooftop. The landing page is responsible for making Step 1 feel inevitable and Step 2 (sharing a photo, attending a drop-in) feel inviting. Everything after that, the community handles.
+          </p>
+          <p style="color: rgba(255,255,255,0.7); font-size: var(--text-body-sm); line-height: 1.7; margin-bottom: 0;">
+            The gamification framework reinforces this through <strong style="color: var(--color-white);">urgent optimism</strong> (Jane McGonigal): the combination of believing you can succeed and wanting to act immediately. White Hat drives (meaning, accomplishment, creativity) build the belief. Targeted Black Hat moments (seasonal scarcity, community momentum) create the urgency. The result: "I could do that, and I want to start this weekend."
+          </p>
+        </div>
+      </div>
 
       <!-- ===== 8 CORE DRIVES MAPPING ===== -->
       <div class="core-drives-section">
